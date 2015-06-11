@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% block main %}
+{% load staticfiles %}
+    <!-- Page Heading -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Home <!--<small>Statistics Overview</small>-->
+                        </h1>
+                    </div>
+                </div>
+			<!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+           <p><strong>Bantuan Langsung Sementara Masyarakat</strong> atau <strong>BLSM</strong> (kadang disebut juga balsem) adalah bantuan yang diberikan Pemerintah Indonesia menyambut kenaikan harga BBM. Pemerintah Indonesia meyakini tindakan ini adalah penting untuk menyelamatkan fiskal negara, meskipun pemerintah juga meyakini bahwa ini adalah keputusan yang sulit bagi pemerintah. Dalam rapat dengan Badan Anggaran Dewan Perwakilan Rakyat (Banggar DPR), telah disepakati total dana ganti rugi kenaikan BBM bersubsidi sebesar 27,9 triliun rupiah. Walaupun begitu, BLSM sering disebut masyarakat sebagai kelanjutan dari Bantuan Langsung Tunai (BLT). </p>
+           <h3>Permasalahan</h3>
+           <p>Dalam pelaksanaannya, eksekusi daripada BLSM ini menghadapi banyak masalah. Contoh masalahnya adalah banyak warga miskin yang tidak mendapatkan bantuan tunai. Beberapa warga yang seharusnya tidak mendapatkan bantuan ini, seperti orang yang telah meninggal. Beberapa kalangan juga menilai BLSM ini tidak tepat, dan juga tidak merata.</p>
+           <p>Salah satu dari penyebab tidak sampainya bantuan yang tepat sasaran adalah data yang tidak valid. Menurut Sekretaris Eksekutif Tim Nasional Percepatan Penanggulangan Kemiskinan (TNP2K), penggunaan data dari Badan Pusat Statistik yang bertahun 2011 disebabkan karena pemutakhiran dan survei membutuhkan waktu dan biaya mahal. Selain itu pula, penggunaan data yang tidak valid membuat BLSM seperti kelanjutan dari BLT. 
+</p>
+<br>
+<br>
+			<a href="{% url 'input-kri'%}"><button>Mulai Hitung AHP</button></a>
+        </div>
+    </div>
+{% endblock %}

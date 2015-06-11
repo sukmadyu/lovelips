@@ -1,0 +1,66 @@
+{% extends "main.html" %}
+{% block main %}
+{% load staticfiles %}
+    <!-- Page Heading -->
+	<section class="bg-header">
+		<div class="container">
+			<div class="row">
+                <div class="col-xs-8 col-xs-offset-2 text-center">
+					<h1>Input Nama Produk</h1>
+                </div>
+            </div>
+		</div>
+    </section>
+        <div class="row">
+            <div class="col-lg-12">
+				<ol class="breadcrumb">
+                <li>
+                    <a href="{% url 'input-kri' %}">Input Kriteria</a>
+                </li>
+                <li>
+                    <a href="{% url 'konsistensi-ahp' ahp.id %}">Hasil Konsistensi Input</a>
+                </li>
+                <li class="active">
+                    Input Nama Produk
+                </li>
+				</ol>
+            </div>
+        </div>
+			<!-- /.row -->
+    <div class="row">
+		<div class="col-xs-2"></div>
+        <div class="col-xs-8">
+        <form action="{% url 'input-nama' ahp.id %}" method="post" class="form" role="form">
+            {% csrf_token %}
+			<p>Masukan 3 nama produk pemulas bibir dengan panjang karakter maksimal 10 karakter. Jika ada produk dengan merek yang sama, buat nama yang berbeda untuk produk tersebut</p>
+			<br>
+			
+			<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-xs-4 col-lg-2"><label>Produk 1</label></div>
+				<div class="col-xs-8">{{ form.produk_a }}</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-xs-4 col-lg-2"><label>Produk 2</label></div>
+				<div class="col-xs-8">{{ form.produk_b }}</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-xs-4 col-lg-2"><label>Produk 3</label></div>
+				<div class="col-xs-8">{{ form.produk_c }}</div>
+			<br>
+		    <br>
+		    <br>
+        <div class="row">
+			<div class="col-lg-1 col-lg-offset-5 col-xs-1 col-xs-offset-3">
+				<button type="submit" class="btn btn-primary">Lanjut</button>
+			</div>
+        </div>
+		<br>
+		</form>       
+		</div>
+    </div>
+{% endblock %}

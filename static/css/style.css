@@ -1,0 +1,194 @@
+body{
+    line-height: 2em;
+    background-color: #F4F4F4;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+}
+
+h1,h2{
+    margin: 20px 0;
+}
+label{
+    display: block;
+}
+form{
+}
+input{
+    display: block;
+    line-height: 2em;
+}
+textarea{
+    height: 80px;
+    width: 100%;
+}
+#login_container{
+    padding: 20px;
+    border-radius: 8px;
+    border: solid #cacaca 1px;
+    width: 400px;
+}
+
+#header{
+    margin: 0 0 20px 0;
+    background-color: white;
+    box-shadow: 1px 2px #d7d7d7;
+    padding: 10px 0;
+}
+#header a{
+    color:orange;
+}
+#logo{
+    margin-bottom: 20px;
+}
+.sidebar-nav{
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.sidebar-nav a{
+    color:#959595;
+}
+.sidebar-nav a:hover{
+    color:#B3B3B3;
+}
+.nav-title{
+    padding: 12px;
+    border-bottom: solid #F4F4F4 1px;
+}
+.sidebar li.active{
+    color:#4A4A4A;
+}
+
+.sidebar ul.nav{
+
+}
+
+.sidebar .active a{
+    color:darkgrey;
+}
+
+.box, .box-navigation{
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 2px 2px #d7d7d7;
+}
+
+.box{
+    padding: 40px 20px;
+    margin: 20px 0;
+}
+
+.box-title{
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 20px;
+}
+
+.form-container{
+    width: 400px;
+}
+
+.form{
+    max-width: 100%;
+}
+
+.form input[type=text], .form input[type=password]{
+    width:100%;
+}
+
+form.form-slot input[type=checkbox]{
+    display: inline;
+    margin-left: 20px;
+    width: 20px;
+    transform: scale(1.5);
+
+  /* Webkit browsers*/
+  -webkit-transform: scale(1.5);
+}
+
+.breadcrumb{
+    background-color: white !important;
+    font-size: 90%;
+}
+
+.breadcrumb a{
+    color: #d7d7d7;
+}
+/*status campaign*/
+.booked{
+    border-radius: 5px;
+    background: #7ED321;
+    color:white;
+    text-align: center;
+}
+.reserved{
+    border-radius: 5px;
+    background: #F5A623;
+    color:white;
+    text-align: center;
+}
+
+.slot{
+    background-color: #efefef;
+    border: solid 1px #222222;
+    margin: 4px 4px  4px 0;
+    text-align: center;
+    float: left;
+    width:80px;
+    height: 80px;
+    padding: 30px;
+}
+
+.slot input[type=checkbox]{
+
+}
+
+.slots-container{
+    padding: 20px 0;
+}
+
+.slots-container-16{
+    width:504px;
+    overflow: auto;
+    margin: 40px 0;
+}
+.slots-container-12{
+    width:336px;
+    overflow: auto;
+    margin: 40px 0;
+
+}
+
+
+.slots-row{
+    clear: both;
+    width: 100%;
+}
+
+.news-slot{
+    clear: both;
+     border: solid 1px #222222;
+    margin: 4px 4px  0 0;
+    text-align: center;
+}
+
+
+.active-train-index{
+    text-decoration: underline;
+    color:black;
+}
+
+.short-input{
+    width: 80px !important;
+    display: inline;
+}
+
+.helptext{
+    color:lightslategray;
+}
+
+form.inline-form label, form.inline-form input{
+    display: inline-block;
+    width: 200px;
+    font-weight: normal;
+}
