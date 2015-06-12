@@ -56,26 +56,26 @@
                 <tr style="text-align: center;">
                     <th>Harga</th>
                     <td class="danger"> 1</td>
-                    <td class="success"> {{ kri_a }}</td>
-                    <td class="success"> {{ kri_b }}</td>
-                    <td class="success"> {{ kri_c }}</td>
-                    <td class="success"> {{ kri_d }}</td>                    
+                    <td class="success"> {{ kri_a|floatformat:2 }}</td>
+                    <td class="success"> {{ kri_b|floatformat:2 }}</td>
+                    <td class="success"> {{ kri_c|floatformat:2 }}</td>
+                    <td class="success"> {{ kri_d|floatformat:2 }}</td>                    
                 </tr>
                 <tr style="text-align: center;">
                     <th>Berat Bersih</th>
                     <td class="warning"> {{ kri_k|floatformat:2 }}</td>
                     <td class="danger"> 1</td>
-                    <td class="success"> {{ kri_e }}</td>
-                    <td class="success"> {{ kri_f }}</td>
-                    <td class="success"> {{ kri_g }}</td>
+                    <td class="success"> {{ kri_e|floatformat:2 }}</td>
+                    <td class="success"> {{ kri_f|floatformat:2 }}</td>
+                    <td class="success"> {{ kri_g|floatformat:2 }}</td>
                 </tr>
                 <tr style="text-align: center;">
                     <th>PAO</th>
                     <td class="warning"> {{ kri_l|floatformat:2}}</td>
                     <td class="warning"> {{ kri_m|floatformat:2 }}</td>
                     <td class="danger"> 1</td>
-                    <td class="success"> {{ kri_h }}</td>
-                    <td class="success"> {{ kri_i }}</td>
+                    <td class="success"> {{ kri_h|floatformat:2 }}</td>
+                    <td class="success"> {{ kri_i|floatformat:2 }}</td>
                 </tr>
                 <tr style="text-align: center;">
 					<th>Daya Tahan Produk</th>
@@ -100,7 +100,7 @@
 				<p><strong>Keteragan :</strong></p>
 				<p>Nilai perbandingan kriteria yang sebelumnya dimasukan akan masuk menjadi elemen yang berwarna hijau dalam bentuk matriks berukuran 5x5</p>
 				<p>Sedangkan elemen matriks berwarna merah merupakan nilai perbandingan antara kriteria yang sama</p>
-				<p>Lalu, elemen matriks yag berwarna kuning merupakan nilai perbandingan kriteria yang menjadi bilangan pembilang pada pecahan</p>
+				<p>Lalu, elemen matriks yang berwarna kuning merupakan nilai perbandingan kriteria yang menjadi bilangan pembilang pada pecahan</p>
 			 </div>
         </div> <!-- panel body -->
         </div> <!-- panel -->
@@ -526,15 +526,15 @@
                 <tbody>
                 <tr>
                     <th>{{nama_a}}</th>
-                    <td style="text-align: center;"> {{ produk_a }}</td>
+                    <td style="text-align: center;"> {{ produk_a|floatformat:5 }}</td>
                 </tr>
                 <tr>
                     <th>{{nama_b}}</th>
-                    <td style="text-align: center;"> {{ produk_b }}</td>
+                    <td style="text-align: center;"> {{ produk_b|floatformat:5 }}</td>
                 </tr>
                 <tr>
                     <th>{{nama_c}}</th>
-                    <td style="text-align: center;"> {{ produk_c }}</td>
+                    <td style="text-align: center;"> {{ produk_c|floatformat:5 }}</td>
                 </tr>
                 </tbody>
             </table>
