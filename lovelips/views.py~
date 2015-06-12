@@ -3,9 +3,10 @@ import numpy as np
 from numpy import linalg as LA
 from decimal import Decimal as D
 
-
+from django.conf import settings
 from django.contrib import messages
 from django.core.urlresolvers import reverse
+from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import View, UpdateView
@@ -22,20 +23,27 @@ def index(request):
 
 class HomeView(View):
     template_name = 'index.html'
-    def Kontak(request, pk):
-        post = get_object_or_404(Post, pk=pk)
-        if request.method == "POST":
-            form = KontakForm(request.POST)
-            if form.is_valid():
-                kontak = form.save(commit=False)
-                kontak.post = post
-                kontak.save()
-                messages.success(request,'Your comment has been successfully saved')
-                return HttpResponseRedirect(reverse('index'))
-        else:
-	    form = KontakForm()
-            messages.error(request,'An error has occured, please try again')
+    def get(self,request):
+
+        form = KontakForm()
         return render(request,self.template_name,{'form':form})
+
+    def post(self,request):
+
+        form = KontakForm(request.POST or None)
+        if form.is_valid():
+            kontak=form.save(commit=False)
+            kontak.save()
+	    subject= 'Pesan pada website lovelips dari {}'.format(kontak.nama)
+	    message= 'nama: {} \nemail: {} \nno telepon: {} \nmessage: {}'.format(kontak.nama,kontak.email,kontak.no_telepon,kontak.pesan)
+	    email_from= settings.EMAIL_HOST_USER
+	    email_to= 'sukmadyu@gmail.com'
+	    send_mail(subject, message, email_from, [email_to], fail_silently=False)
+            messages.success(request,'Your comment has been successfully saved')
+            return HttpResponseRedirect(reverse('index'))
+        else:
+            messages.error(request,'An error has occured, please try again')
+            return render(request,self.template_name,{'form':form})
 
 class InputKriteriaAHPView(View):
     template_name = 'ahp/input-kri.html'
@@ -323,15 +331,23 @@ class DetailAHPView(View):
                                                   'isi_a':int(isi_a),'isi_b':int(isi_b),'isi_c':int(isi_c),
                                                   'pao_a':int(pao_a),'pao_b':int(pao_b),'pao_c':int(pao_c),
 						  'time_a':int(time_a),'time_b':int(time_b),'time_c':int(time_c),
-						  'cruelty_free_a':int(cruelty_free_a),'cruelty_free_b':int(cruelty_free_b),'cruelty_free_c':int(cruelty_free_c),
+						  'cruelty_free_a':int(cruelty_free_a),'cruelty_free_b':int(cruelty_free_b),
+						  'cruelty_free_c':int(cruelty_free_c),
                                                   'bobot_harga_a':harga_arr_a,'bobot_harga_b':harga_arr_b,'bobot_harga_c':harga_arr_c,
                                                   'bobot_isi_a':isi_arr_a,'bobot_isi_b':isi_arr_b,'bobot_isi_c':isi_arr_c,
                                                   'bobot_pao_a':pao_arr_a,'bobot_pao_b':pao_arr_b,'bobot_pao_c':pao_arr_c,
 						  'bobot_time_a':time_arr_a,'bobot_time_b':time_arr_b,'bobot_time_c':time_arr_c,
-				     'bobot_cruelty_free_a':cruelty_free_arr_a,'bobot_cruelty_free_b':cruelty_free_arr_b,'bobot_cruelty_free_c':cruelty_free_arr_c,
-                                                  'kri_a':int(kri_a),'kri_b':int(kri_b),'kri_c':int(kri_c),'kri_d':int(kri_d),'kri_e':int(kri_e),'kri_e':int(kri_e),'kri_f':int(kri_f),'kri_g':int(kri_g),'kri_h':int(kri_h),'kri_i':int(kri_i),'kri_j':int(kri_j),
-                                                  'bobot_harga':kri_harga,'bobot_isi':kri_isi,'bobot_pao':kri_pao,'bobot_time':kri_time,'bobot_cruelty_free':kri_cruelty_free,
-
+						  'bobot_cruelty_free_a':cruelty_free_arr_a,'bobot_cruelty_free_b':cruelty_free_arr_b,
+						  'bobot_cruelty_free_c':cruelty_free_arr_c,
+                                                  'kri_a':kri_a,'kri_b':kri_b,'kri_c':kri_c,
+						  'kri_d':kri_d,'kri_e':kri_e,'kri_e':kri_e,'kri_f':kri_f,
+						  'kri_g':kri_g,'kri_h':kri_h,'kri_i':kri_i,
+						  'kri_j':kri_j,'kri_k':kri_k,'kri_l':kri_l,
+						  'kri_m':kri_m,'kri_n':kri_n,'kri_o':kri_o,
+						  'kri_p':kri_p,'kri_q':kri_q,'kri_r':kri_r,
+						  'kri_s':kri_s,'kri_t':kri_t,                                                
+						  'bobot_harga':kri_harga,'bobot_isi':kri_isi,'bobot_pao':kri_pao,
+						  'bobot_time':kri_time,'bobot_cruelty_free':kri_cruelty_free,
                                                   'produk_a':produk_a,'produk_b':produk_b,'produk_c':produk_c,
                                                   'produk_max':produk[inde],'cons':cons,'cons_pre':cons*100,
                                                   'nama_a':nama_a,'nama_b':nama_b,'nama_c':nama_c,  
@@ -354,6 +370,17 @@ class KonsistensiAHPView(View):
 	kri_h=float(kri[7])
 	kri_i=float(kri[8])
 	kri_j=float(kri[9])
+	kri_k=1/kri_a
+	kri_l=1/kri_b
+	kri_m=1/kri_e
+	kri_n=1/kri_c
+	kri_o=1/kri_f
+	kri_p=1/kri_h
+	kri_q=1/kri_d
+	kri_r=1/kri_g
+	kri_s=1/kri_i
+	kri_t=1/kri_j
+	
         kri_arr=np.array([1,kri_a,kri_b,kri_c,kri_d,
                           1/kri_a,1,kri_e,kri_f,kri_g,
                           1/kri_b,1/kri_e,1,kri_h,kri_i,
@@ -372,12 +399,17 @@ class KonsistensiAHPView(View):
         kri_arr=np.array(kri_arr)
         kri_arr=kri_arr.reshape(5,1)
 
-        return render(request,self.template_name,{'kri_a':int(kri_a),'kri_b':int(kri_b),'kri_c':int(kri_c),'kri_d':int(kri_d),'kri_e':int(kri_e),'kri_e':int(kri_e),'kri_f':int(kri_f),'kri_g':int(kri_g),'kri_h':int(kri_h),'kri_i':int(kri_i),'kri_j':int(kri_j),
-                                                  'bobot_harga':kri_harga,'bobot_isi':kri_isi,'bobot_pao':kri_pao,'bobot_time':kri_time,'bobot_cruelty_free':kri_cruelty_free,
-
-                                                  'cons':cons,'cons_pre':cons*100,'alternatif':alternatif
-                                                    
-                                                    })
+        return render(request,self.template_name,{'kri_a':kri_a,'kri_b':kri_b,'kri_c':kri_c,
+						'kri_d':kri_d,'kri_e':kri_e,'kri_e':kri_e,'kri_f':kri_f,
+						'kri_g':kri_g,'kri_h':kri_h,'kri_i':kri_i,
+						'kri_j':kri_j,'kri_k':kri_k,'kri_l':kri_l,
+						'kri_m':kri_m,'kri_n':kri_n,'kri_o':kri_o,
+						'kri_p':kri_p,'kri_q':kri_q,'kri_r':kri_r,
+						'kri_s':kri_s,'kri_t':kri_t,
+						'bobot_harga':kri_harga,'bobot_isi':kri_isi,'bobot_pao':kri_pao,
+						'bobot_time':kri_time,'bobot_cruelty_free':kri_cruelty_free,
+						'cons':cons,'cons_pre':cons*100,'alternatif':alternatif
+						})
 
 class InputNamaView(View):
     template_name = 'ahp/input-nama.html'

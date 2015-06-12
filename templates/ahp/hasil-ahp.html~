@@ -63,7 +63,7 @@
                 </tr>
                 <tr style="text-align: center;">
                     <th>Berat Bersih</th>
-                    <td class="warning"> {{ kri_k|floatformat:2 }}</td>
+                    <td class="warning"> 1/{{ kri_a }}</td>
                     <td class="danger"> 1</td>
                     <td class="success"> {{ kri_e }}</td>
                     <td class="success"> {{ kri_f }}</td>
@@ -71,26 +71,26 @@
                 </tr>
                 <tr style="text-align: center;">
                     <th>PAO</th>
-                    <td class="warning"> {{ kri_l|floatformat:2}}</td>
-                    <td class="warning"> {{ kri_m|floatformat:2 }}</td>
+                    <td class="warning"> 1/{{ kri_b }}</td>
+                    <td class="warning"> 1/{{ kri_e }}</td>
                     <td class="danger"> 1</td>
                     <td class="success"> {{ kri_h }}</td>
                     <td class="success"> {{ kri_i }}</td>
                 </tr>
                 <tr style="text-align: center;">
 					<th>Daya Tahan Produk</th>
-					<td class="warning"> {{ kri_n|floatformat:2 }}</td>
-					<td class="warning"> {{ kri_o|floatformat:2 }}</td>
-					<td class="warning"> {{ kri_p|floatformat:2 }}</td>
+					<td class="warning"> 1/{{ kri_c }}</td>
+					<td class="warning"> 1/{{ kri_f }}</td>
+					<td class="warning"> 1/{{ kri_h }}</td>
 					<td class="danger"> 1</td>
-					<td class="success"> {{ kri_j |floatformat:2 }}</td>
+					<td class="success"> {{ kri_j }}</td>
                 </tr>
                 <tr style="text-align: center;">
 					<th>Cruelty-Free</th>
-					<td class="warning"> {{ kri_q|floatformat:2 }}</td>
-					<td class="warning"> {{ kri_r|floatformat:2 }}</td>
-					<td class="warning"> {{ kri_s|floatformat:2 }}</td>
-					<td class="warning"> {{ kri_t|floatformat:2 }}</td>
+					<td class="warning"> 1/{{ kri_d }}</td>
+					<td class="warning"> 1/{{ kri_g }}</td>
+					<td class="warning"> 1/{{ kri_i }}</td>
+					<td class="warning"> 1/{{ kri_j }}</td>
 					<td class="danger"> 1</td>
                 </tr>
                 </tbody>
