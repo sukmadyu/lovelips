@@ -6,8 +6,6 @@ from . import views
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
-    
-
     url(r'^input-ahp/(?P<id>\d+)$', views.InputAHPView.as_view(id=None),name='input-ahp'),
 
     url(r'^input-nama/(?P<id>\d+)$', views.InputNamaView.as_view(id=None),name='input-nama'),

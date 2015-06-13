@@ -2,10 +2,10 @@
 {% block main %}
     {% load staticfiles %}
     <!-- Page Heading -->
-	<section class="bg-header">
+	<section class="bg-header" style="padding-top: 75px;padding-bottom: 40px;">
 		<div class="container">
 			<div class="row">
-                <div class="col-xs-8 col-xs-offset-2 text-center">
+                <div class="col-xs-8 col-xs-offset-2" style="margin-left: 40px; width: 330px;">
 					<h1>Hasil Penilaian Konsistensi Inputan Perbandingan Kriteria</h1>
                 </div>
 		</div>
@@ -17,7 +17,7 @@
                     <a href="{% url 'input-kri' %}">Input Kriteria</a>
                 </li>
                 <li class="active">
-                    <a href="{% url 'konsistensi-ahp' alternatif.id %}">Hasil Konsistensi Input</a>
+                    Hasil Konsistensi Input
                 </li>
             </ol>
         </div>
