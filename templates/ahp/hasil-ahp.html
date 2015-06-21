@@ -548,5 +548,37 @@
         </div> <!-- col-lg-6 -->
 		</div> <!-- panel bobot kriteria -->
         </div> <!-- col-lg-12 -->
+
+<canvas id="myChart" width="400" height="400"></canvas>
+
+<script src="{% static 'js/Chart.js'%}"></script>
+<script>
+
+    var data = [
+    {
+        value: {{ produk_a|floatformat:5 }},
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "{{nama_a}}",
+    },
+    {
+        value: {{ produk_b|floatformat:5 }},
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "{{nama_b}}",
+    },
+    {
+        value: {{ produk_c|floatformat:5 }},
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "{{nama_c}}",
+    }
+]
+
+
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myNewChart = new Chart(ctx).PolarArea(data);
+    var myPieChart = new Chart(ctx[0]).Pie(data,options);
+</script>
 {% endblock %}
 
