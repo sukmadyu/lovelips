@@ -42,6 +42,7 @@
 								 <div class="col-lg-6">
 									<p><strong>Cara Mengisi Form Level Kriteria:</strong></p>
 									<ol>
+										<li>Isi satu Level dengan salah satu kriteria berikut: Harga, Berat Bersih, PAO, Daya Tahan Produk, Animal Cruelty-Free </li>
 										<li>Jika memungkinkan ada kriteria yang sama penting dengan kriteria lain, anda dapat mengisi lebih dari satu kriteria yang <strong>sama penting</strong> dengan kriteria lain dalam form dengan level yang sama.</li>
 										<li>Pastikan tidak ada kriteria yang berulang pada level yang berbeda</li>
 										<li>Level 1 merupakan level tertinggi dari prioritas anda</li>
@@ -76,8 +77,7 @@
             <div class="row">
 				<div class="col-lg-2"></div>
                 <div class="col-lg-8">
-					<p>Buatlah perbandingan antara tiap kriteria di bawah ini dengan konsisten berdasarkan <strong>Form Level Kriteria</strong> yang telah ditentukan tadi.
-					Angka yang tertulis dalam pilihan merupakan nilai yang akan dimasukan dalam penilaian konsistensi perbandingan kriteria.</p>
+					<p>Pilih satu atau lebih kriteria pada satu level berdasarkan <strong>Form Level Kriteria</strong> yang telah ditentukan tadi.</p>
 					<br>
 					<strong>Cara mengisi form perbandingan kriteria:</strong>
 					<br>
@@ -121,7 +121,7 @@
 									<p><strong>Level 1</strong>, maka nilai perbandingan kriteria yang mungkin adalah <strong>(1/2) atau (1/3)</strong></p>
 									<p><strong>Level 3</strong>, maka nilai perbandingan kriteria yang mungkin adalah <strong>(2) atau (3)</strong></p>
 									<p><strong>Level 4</strong>, maka nilai perbandingan kriteria yang mungkin adalah <strong>(4) atau (5)</strong></p>
-									<p><strong>Level 5</strong>, maka nilai perbandingan kriteria yang mungkin adalah <strong>(4) atau (5)</strong></p>
+									<p><strong>Level 5</strong>, maka nilai perbandingan kriteria yang mungkin adalah <strong>(6) atau (7)</strong></p>
 								</div>
 							</div>
 						</div>
@@ -168,7 +168,7 @@
 								<div class="panel-body">
 									<p><strong>Level 1</strong>, maka nilai perbandingan kriteria yang mungkin adalah <strong>(1/8) atau (1/9)</strong></p>
 									<p><strong>Level 2</strong>, maka nilai perbandingan kriteria yang mungkin adalah <strong>(1/6) atau (1/7)</strong></p>
-									<p><strong>Level 3</strong>, maka nilai perbandingan kriteria yang mungkin adalah <strong>(1/3) atau (1/4)</strong></p>
+									<p><strong>Level 3</strong>, maka nilai perbandingan kriteria yang mungkin adalah <strong>(1/4) atau (1/5)</strong></p>
 									<p><strong>Level 4</strong>, maka nilai perbandingan kriteria yang mungkin adalah <strong>(1/2) atau (1/3)</strong></p>
 								</div>
 							</div>
@@ -177,217 +177,185 @@
 					<br>
                 </div>
             
-			
+		<div class="row">
             <form action="{% url 'input-kri' %}" method="post" class="form" role="form">
                 {% csrf_token %}
-                <div class="row">
-					<div class="col-lg-3 col-xs-2"></div>
-                    <div class="col-lg-1 col-xs-2">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/rupiah.jpg" %} alt="">
-                            </div>
-						</span>
-                    </div>
-                    <div class="col-xs-4"> {{ form.kri_harga_isi }}</div>
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-1 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/netto.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-					<div class="col-lg-3 col-xs-2"></div>
-                    <div class="col-lg-1 col-xs-2">
-						<div class="input-kriteria-image">
-							<img class="img-circle img-responsive" src={% static "img/rupiah.jpg" %} alt="">
-                        </div>
-                    </div>
-                    <div class="col-xs-4"> {{ form.kri_harga_pao }}</div>
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-1 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/pao.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-3 col-xs-2"></div>
-                    <div class="col-lg-1 col-xs-2">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/rupiah.jpg" %} alt="">
-                            </div>
-						</span>
-                    </div>
-                    <div class="col-xs-4 "> {{ form.kri_harga_time }}</div>
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-1 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/time.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-3 col-xs-2"></div>
-                    <div class="col-lg-1 col-xs-2 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/rupiah.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                    <div class="col-xs-4 "> {{ form.kri_harga_cf }}</div>
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-1 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/cf.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-3 col-xs-2"></div>
-                    <div class="col-lg-1 col-xs-2 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/netto.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                    <div class="col-xs-4 "> {{ form.kri_isi_pao }}</div>
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-1 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/pao.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-3 col-xs-2"></div>
-                    <div class="col-lg-1 col-xs-2 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/netto.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                    <div class="col-xs-4"> {{ form.kri_isi_time }}</div>
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-1 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/time.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-3 col-xs-2"></div>
-                    <div class="col-lg-1 col-xs-2 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/netto.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                    <div class="col-xs-4 "> {{ form.kri_isi_cf }}</div>
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-1 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/cf.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-3 col-xs-2"></div>
-                    <div class="col-lg-1 col-xs-2 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/pao.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                    <div class="col-xs-4 "> {{ form.kri_pao_time }}</div>
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-1 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/time.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-3 col-xs-2"></div>
-                    <div class="col-lg-1 col-xs-2 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/pao.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                    <div class="col-xs-4 "> {{ form.kri_pao_cf }}</div>
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-1 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/cf.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-3 col-xs-2"></div>
-                    <div class="col-lg-1 col-xs-2 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/time.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                    <div class="col-xs-4 "> {{ form.kri_time_cf }}</div>
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-1 ">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/cf.jpg" %} alt="">
-							</div>	
-                        </span>
-                    </div>
-                </div>
-                <br>
-                <br>
-                
-				
+					{{ form.kri_harga_isi }}
+                    {{ form.kri_harga_pao }}
+                    {{ form.kri_harga_time }}
+                    {{ form.kri_harga_cf }}
+                    {{ form.kri_isi_pao }}
+                    {{ form.kri_isi_time }}
+                    {{ form.kri_isi_cf }}
+                    {{ form.kri_pao_time }}
+                    {{ form.kri_pao_cf }}
+                    {{ form.kri_time_cf }}
+                    
+                <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 table-responsive">
+					<table class="table" style="margin-top: 10px; margin-bottom: 10px; border: 0px solid #fff; border-bottom:0px solid #fff; border-top:0px solid #fff;">
+						<tbody>
+							<tr >
+								<th></th>
+								<th style="width: 66px;">
+									<img style="text-align: center;" class="img-circle img-responsive" src={% static "img/rupiah.jpg" %} title="Harga" height=50 width=50>
+								</th>
+								<th  style="width: 66px;">
+									<img class="img-circle img-responsive" src={% static "img/netto.jpg" %} title="Berat Bersih" height=50 width=50>
+								</th>
+								<th  style="width: 66px;">
+									<img class="img-circle img-responsive" src={% static "img/pao.jpg" %} title="Period After Opening" height=50 width=50>
+								</th>
+								<th  style="width: 66px;">
+									<img class="img-circle img-responsive" src={% static "img/cf.jpg" %} title="Animal Cruelty-Free" height=50 width=50>
+								</th>
+								<th  style="width: 66px;">
+									<img class="img-circle img-responsive" src={% static "img/time.jpg" %} title="Daya Tahan Produk" height=50 width=50>
+								</th>
+
+							</tr>
+							<tr class="danger" style="width: 50px; text-align: center;">
+								<td><strong>Level 1</strong></td>
+								<td><input type="radio" name="price" value="1"></td>
+								<td><input type="radio" name="berat" value="1"></td>
+								<td><input type="radio" name="pao" value="1"></td>
+								<td><input type="radio" name="cf" value="1"></td>
+								<td><input type="radio" name="time" value="1"></td>
+							</tr>
+							<tr class="warning" style="width: 110px; text-align: center;">
+								<td><strong>Level 2</strong></td>
+								<td><input type="radio" name="price" value="2"></td>
+								<td><input type="radio" name="berat" value="2"></td>
+								<td><input type="radio" name="pao" value="2"></td>
+								<td><input type="radio" name="cf" value="2"></td>
+								<td><input type="radio" name="time" value="2"></td>
+							</tr>
+							<tr class="success" style="width: 110px; text-align: center;">
+								<td><strong>Level 3</strong></td>
+								<td><input type="radio" name="price" value="3"></td>
+								<td><input type="radio" name="berat" value="3"></td>
+								<td><input type="radio" name="pao" value="3"></td>
+								<td><input type="radio" name="cf" value="3"></td>
+								<td><input type="radio" name="time" value="3"></td>
+							</tr>
+							<tr class="info" style="width: 110px; text-align: center;">
+								<td><strong>Level 4</strong></td>
+								<td><input type="radio" name="price" value="4"></td>
+								<td><input type="radio" name="berat" value="4"></td>
+								<td><input type="radio" name="pao" value="4"></td>
+								<td><input type="radio" name="cf" value="4"></td>
+								<td><input type="radio" name="time" value="4"></td>
+							</tr>
+							<tr style="width: 110px; text-align: center;">
+								<td><strong>Level 5</strong></td>
+								<td><input type="radio" name="price" value="5"></td>
+								<td><input type="radio" name="berat" value="5"></td>
+								<td><input type="radio" name="pao" value="5"></td>
+								<td><input type="radio" name="cf" value="5"></td>
+								<td><input type="radio" name="time" value="5"></td>
+							</tr>
+						</tbody>
+					</table>
+                </div> <!-- col-lg-6 -->
                 <div class="row">
                     <div class="col-lg-1 col-lg-offset-5 col-xs-1 col-xs-offset-3 col-sm-1 col-sm-offset-5">
-                        <button type="submit" class="btn btn-primary">Lanjutkan</button>
+                        <button id="submit" type="submit" class="btn btn-primary">Lanjutkan</button>
                     </div>
-                </div>
-                <br>
+                </div> 
             </form>
-        </div>
-    </div>
+            <br>
+		</div>
+
+    <script src="{% static 'js/jquery.js'%}"></script>
+        <script>
+            function kriteria(kiri,kanan){
+                if (kiri==kanan){
+                    return 1;
+                }else if (kiri==1){
+                    if (kanan==2){
+                        return 2;
+                    }else if(kanan==3){
+                        return 3;
+                    }else if(kanan==4){
+                        return 4;
+                    }else if(kanan==5){
+                        return 5;
+                    }
+                }else if (kiri==2){
+                    if (kanan==1){
+                        return 0.5;
+                    }else if(kanan==3){
+                        return 3;
+                    }else if(kanan==4){
+                        return 4;
+                    }else if(kanan==5){
+                        return 5;
+                    }
+                }else if (kiri==3){
+                    if (kanan==1){
+                        return 0.5;
+                    }else if(kanan==2){
+                        return 0.333333333333;
+                    }else if(kanan==4){
+                        return 4;
+                    }else if(kanan==5){
+                        return 5;
+                    }
+                }else if (kiri==4){
+                    if (kanan==1){
+                        return 0.25;
+                    }else if(kanan==2){
+                        return 0.333333333333;
+                    }else if(kanan==3){
+                        return 0.5;
+                    }else if(kanan==5){
+                        return 2;
+                    }
+                }else if (kiri==5){
+                    if (kanan==1){
+                        return 0.2;
+                    }else if(kanan==2){
+                        return 0.25;
+                    }else if(kanan==3){
+                        return 0.333333333333;
+                    }else if(kanan==4){
+                        return 0.5;
+                    }
+                }
+            }
+            $(function(){
+                $(document).ready(function(){
+                    $("#id_kri_harga_isi").hide();
+                    $("#id_kri_harga_pao").hide();
+                    $("#id_kri_harga_time").hide();
+                    $("#id_kri_harga_cf").hide();
+                    $("#id_kri_isi_pao").hide();
+                    $("#id_kri_isi_time").hide();
+                    $("#id_kri_isi_cf").hide();
+                    $("#id_kri_pao_time").hide();
+                    $("#id_kri_pao_cf").hide();
+                    $("#id_kri_time_cf").hide();
+                });
+
+                $("#submit").click(function(){
+                    price=$('input[name=price]:checked').val();
+                    berat=$('input[name=berat]:checked').val();
+                    pao=$('input[name=pao]:checked').val();
+                    cf=$('input[name=cf]:checked').val();
+                    time=$('input[name=time]:checked').val();
+                    $("#id_kri_harga_isi").val(kriteria(price,berat));
+                    $("#id_kri_harga_pao").val(kriteria(price,pao));
+                    $("#id_kri_harga_time").val(kriteria(price,time));
+                    $("#id_kri_harga_cf").val(kriteria(price,cf));
+                    $("#id_kri_isi_pao").val(kriteria(berat,pao));
+                    $("#id_kri_isi_time").val(kriteria(berat,time));
+                    $("#id_kri_isi_cf").val(kriteria(berat,cf));
+                    $("#id_kri_pao_time").val(kriteria(pao,time));
+                    $("#id_kri_pao_cf").val(kriteria(pao,cf));
+                    $("#id_kri_time_cf").val(kriteria(time,cf));
+
+                });
+             });
+
+        </script>
 {% endblock %}

@@ -525,19 +525,22 @@
 			<table border="1" class="table table-striped table-bordered">
                 <tbody>
                 <tr>
-                    <th>{{nama_a}}</th>
+                    <th style="background-color: #A31947; color: #FFFFFF;">{{nama_a}}</th>
                     <td style="text-align: center;"> {{ produk_a|floatformat:5 }}</td>
                 </tr>
                 <tr>
-                    <th>{{nama_b}}</th>
+                    <th style="background-color: #D11975; color: #FFFFFF;">{{nama_b}}</th>
                     <td style="text-align: center;"> {{ produk_b|floatformat:5 }}</td>
                 </tr>
                 <tr>
-                    <th>{{nama_c}}</th>
+                    <th style="background-color: #FF5050; color: #FFFFFF;">{{nama_c}}</th>
                     <td style="text-align: center;"> {{ produk_c|floatformat:5 }}</td>
                 </tr>
                 </tbody>
             </table>
+            <br>
+            <canvas id="myChart" width="400" height="400"></canvas>
+            <br>
         </div> <!-- col-lg-6 -->
         <div class="col-lg-6">   
             <p><strong>Keterangan :</strong></p>
@@ -548,5 +551,38 @@
         </div> <!-- col-lg-6 -->
 		</div> <!-- panel bobot kriteria -->
         </div> <!-- col-lg-12 -->
+        
+
+
+<script src="{% static 'js/Chart.js'%}"></script>
+
+<script>
+
+    var data = [
+    {
+        value: {{ produk_a|floatformat:5 }},
+        color:"#990033",
+        highlight: "#A31947",
+        label: "{{nama_a}}",
+    },
+    {
+        value: {{ produk_b|floatformat:5 }},
+        color: "#D11975",
+        highlight: "#D63385",
+        label: "{{nama_b}}",
+    },
+    {
+        value: {{ produk_c|floatformat:5 }},
+        color: "#FF5050",
+        highlight: "#FF6262",
+        label: "{{nama_c}}",
+    }
+]
+
+
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myNewChart = new Chart(ctx).PolarArea(data);
+    var myPieChart = new Chart(ctx[0]).Pie(data,options);
+</script>
 {% endblock %}
 

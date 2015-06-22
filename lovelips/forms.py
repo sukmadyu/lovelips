@@ -58,47 +58,17 @@ class AHPForm(forms.ModelForm):
 	    'cruelty_free':forms.HiddenInput(),
         }
 class AHPKriteriaForm(forms.ModelForm):
-    PLANNING_CHOICES_WITH_TITLES = (
-        (1./9, '(1/9) Mutlak Tidak Penting Daripada'),
-        (1./8, '(1/8) DIANTARA Sangat dan Mutlak Tidak Penting Daripada'),
-        (1./7, '(1/7) Sangat Tidak Penting Daripada'),
-        (1./6, '(1/6) DIANTARA Tidak Penting dan Sangat Tidak Penting Daripada'),
-        (1./5, '(1/5) Tidak Penting Daripada'),
-        (1./4, '(1/4) DIANTARA Tidak Cukup dan Tidak Penting Daripada'),
-        (1./3, '(1/3) Tidak Cukup Penting Daripada'),
-        (1./2, '(1/2) DIANTARA Sama Penting dan Tidak Cukup Penting Daripada'),
-        (1, '(1) Sama Penting Daripada'),
-        (2, '(2) DIANTARA Sama Penting dan Cukup Penting Daripada'),
-        (3, '(3) Cukup Penting Daripada'),
-        (4, '(4) DIANTARA Cukup Penting dan Lebih Penting Daripada'),
-        (5, '(5) Lebih Penting Daripada'),
-        (6, '(6) DIANTARA Lebih Penting dan Sangat Lebih Penting Daripada'),
-        (7, '(7) Sangat Lebih Penting Daripada'),
-        (8, '(8) DIANTARA Sangat dan Mutlak Lebih Penting Daripada'),
-        (9, '(9) Mutlak Lebih Penting Daripada'),
-    )
 
-
-    kri_harga_isi=forms.ChoiceField(
-        required=True, choices=PLANNING_CHOICES_WITH_TITLES,widget=forms.Select(attrs={'class':'form-control '}))
-    kri_harga_pao=forms.ChoiceField(
-        required=True, choices=PLANNING_CHOICES_WITH_TITLES,widget=forms.Select(attrs={'class':'form-control '}))
-    kri_harga_time=forms.ChoiceField(
-        required=True, choices=PLANNING_CHOICES_WITH_TITLES,widget=forms.Select(attrs={'class':'form-control '}))
-    kri_harga_cf=forms.ChoiceField(
-        required=True, choices=PLANNING_CHOICES_WITH_TITLES,widget=forms.Select(attrs={'class':'form-control '}))
-    kri_isi_pao=forms.ChoiceField(
-        required=True, choices=PLANNING_CHOICES_WITH_TITLES,widget=forms.Select(attrs={'class':'form-control '}))
-    kri_isi_time=forms.ChoiceField(
-        required=True, choices=PLANNING_CHOICES_WITH_TITLES,widget=forms.Select(attrs={'class':'form-control '}))
-    kri_isi_cf=forms.ChoiceField(
-        required=True, choices=PLANNING_CHOICES_WITH_TITLES,widget=forms.Select(attrs={'class':'form-control '}))
-    kri_pao_time=forms.ChoiceField(
-        required=True, choices=PLANNING_CHOICES_WITH_TITLES,widget=forms.Select(attrs={'class':'form-control '}))
-    kri_pao_cf=forms.ChoiceField(
-        required=True, choices=PLANNING_CHOICES_WITH_TITLES,widget=forms.Select(attrs={'class':'form-control '}))
-    kri_time_cf=forms.ChoiceField(
-        required=True, choices=PLANNING_CHOICES_WITH_TITLES,widget=forms.Select(attrs={'class':'form-control '}))
+    kri_harga_isi=forms.FloatField()
+    kri_harga_pao=forms.FloatField()
+    kri_harga_time=forms.FloatField()
+    kri_harga_cf=forms.FloatField()
+    kri_isi_pao=forms.FloatField()
+    kri_isi_time=forms.FloatField()
+    kri_isi_cf=forms.FloatField()
+    kri_pao_time=forms.FloatField()
+    kri_pao_cf=forms.FloatField()
+    kri_time_cf=forms.FloatField()
     class Meta:
         model = Alternatif
         fields = ('kri',)
