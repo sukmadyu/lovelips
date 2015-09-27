@@ -4,6 +4,7 @@ from lovelips.views import HomeView
 urlpatterns = patterns('',
     # Examples:
      url(r'^$', HomeView.as_view(), name='index'),
+     url(r'^codingcamp/', 'codingcamp.views.index', name='codingcamp-index'),
     # url(r'^blog/', include('blog.urls')),
     #url(r'^login/$', views.login_view,name='login'),
     
