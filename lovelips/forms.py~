@@ -18,9 +18,9 @@ class KontakForm(forms.ModelForm):
 
 class NamaProdukForm(forms.ModelForm):
 
-    produk_a=forms.CharField(required=True, widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    produk_b=forms.CharField(required=True, widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    produk_c=forms.CharField(required=True, widget=forms.TextInput(attrs={'class':'form-control','required':''}))
+    produk_a=forms.CharField(required=True, widget=forms.TextInput(attrs={'class':'form-control','required'}))
+    produk_b=forms.CharField(required=True, widget=forms.TextInput(attrs={'class':'form-control'}))
+    produk_c=forms.CharField(required=True, widget=forms.TextInput(attrs={'class':'form-control'}))
     class Meta:
         model = Alternatif
         fields = ('nama_product',)
@@ -31,21 +31,21 @@ class NamaProdukForm(forms.ModelForm):
 
 class AHPForm(forms.ModelForm):
 
-    harga_a=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    harga_b=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    harga_c=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    isi_a=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    isi_b=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    isi_c=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    pao_a=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    pao_b=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    pao_c=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    time_a=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    time_b=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    time_c=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    cruelty_free_a=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    cruelty_free_b=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
-    cruelty_free_c=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','required':''}))
+    harga_a=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control '}))
+    harga_b=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    harga_c=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    isi_a=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    isi_b=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    isi_c=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    pao_a=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    pao_b=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    pao_c=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    time_a=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    time_b=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    time_c=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    cruelty_free_a=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    cruelty_free_b=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
+    cruelty_free_c=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
     class Meta:
         model = Alternatif
         fields = ('harga','isi','pao','time','cruelty_free')

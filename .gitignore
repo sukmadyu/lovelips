@@ -1,3 +1,6 @@
 *.pyc
+<<<<<<< HEAD
 *.idea
 templates/.idea/ 
+=======
+>>>>>>> e20351d4fccda58a390c399400c59d828be9695c
