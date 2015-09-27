@@ -21,7 +21,7 @@
     </div>
     <!-- /.row -->
     <div class="row">
-        <div class="col-lg-12">         
+        <div class="col-lg-12">
             <div class="row">
 				<div class="col-lg-2"></div>
                 <div class="col-lg-8">
@@ -36,7 +36,7 @@
 			</div>
 		</div>
 	</div>
-            
+
 		<div class="row">
             <form action="{% url 'input-kri' %}" method="post" class="form" role="form">
                 {% csrf_token %}
@@ -50,7 +50,7 @@
                     {{ form.kri_pao_time }}
                     {{ form.kri_pao_cf }}
                     {{ form.kri_time_cf }}
-                    
+
                 <div class="col-lg-3 col-md-3 col-sm-3"></div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 table-responsive">
 					<table class="table" style="margin-top: 10px; margin-bottom: 10px; border: 0px solid #fff; border-bottom:0px solid #fff; border-top:0px solid #fff;">
@@ -76,43 +76,43 @@
 							</tr>
 							<tr class="danger" style="width: 50px; text-align: center;">
 								<td><strong>Level 1</strong></td>
-								<td><input type="radio" name="price" value="1"></td>
-								<td><input type="radio" name="berat" value="1"></td>
-								<td><input type="radio" name="pao" value="1"></td>
-								<td><input type="radio" name="time" value="1"></td>
-								<td><input type="radio" name="cf" value="1"></td>
+								<td><input type="radio" name="price" value="1" required></td>
+								<td><input type="radio" name="berat" value="1" required></td>
+								<td><input type="radio" name="pao" value="1" required></td>
+								<td><input type="radio" name="time" value="1" required></td>
+								<td><input type="radio" name="cf" value="1" required></td>
 							</tr>
 							<tr class="warning" style="width: 110px; text-align: center;">
 								<td><strong>Level 2</strong></td>
-								<td><input type="radio" name="price" value="2"></td>
-								<td><input type="radio" name="berat" value="2"></td>
-								<td><input type="radio" name="pao" value="2"></td>
-								<td><input type="radio" name="time" value="2"></td>
-								<td><input type="radio" name="cf" value="2"></td>
+								<td><input type="radio" name="price" value="2" required></td>
+								<td><input type="radio" name="berat" value="2" required></td>
+								<td><input type="radio" name="pao" value="2" required></td>
+								<td><input type="radio" name="time" value="2" required></td>
+								<td><input type="radio" name="cf" value="2" required></td>
 							</tr>
 							<tr class="success" style="width: 110px; text-align: center;">
 								<td><strong>Level 3</strong></td>
-								<td><input type="radio" name="price" value="3"></td>
-								<td><input type="radio" name="berat" value="3"></td>
-								<td><input type="radio" name="pao" value="3"></td>
-								<td><input type="radio" name="time" value="3"></td>
-								<td><input type="radio" name="cf" value="3"></td>
+								<td><input type="radio" name="price" value="3" required></td>
+								<td><input type="radio" name="berat" value="3" required></td>
+								<td><input type="radio" name="pao" value="3" required></td>
+								<td><input type="radio" name="time" value="3" required></td>
+								<td><input type="radio" name="cf" value="3" required></td>
 							</tr>
 							<tr class="info" style="width: 110px; text-align: center;">
 								<td><strong>Level 4</strong></td>
-								<td><input type="radio" name="price" value="4"></td>
-								<td><input type="radio" name="berat" value="4"></td>
-								<td><input type="radio" name="pao" value="4"></td>
-								<td><input type="radio" name="time" value="4"></td>
-								<td><input type="radio" name="cf" value="4"></td>
+								<td><input type="radio" name="price" value="4" required></td>
+								<td><input type="radio" name="berat" value="4" required></td>
+								<td><input type="radio" name="pao" value="4" required></td>
+								<td><input type="radio" name="time" value="4" required></td>
+								<td><input type="radio" name="cf" value="4" required></td>
 							</tr>
 							<tr style="width: 110px; text-align: center;">
 								<td><strong>Level 5</strong></td>
-								<td><input type="radio" name="price" value="5"></td>
-								<td><input type="radio" name="berat" value="5"></td>
-								<td><input type="radio" name="pao" value="5"></td>
-								<td><input type="radio" name="time" value="5"></td>
-								<td><input type="radio" name="cf" value="5"></td>
+								<td><input type="radio" name="price" value="5" required></td>
+								<td><input type="radio" name="berat" value="5" required></td>
+								<td><input type="radio" name="pao" value="5" required></td>
+								<td><input type="radio" name="time" value="5" required></td>
+								<td><input type="radio" name="cf" value="5" required></td>
 							</tr>
 						</tbody>
 					</table>
@@ -121,7 +121,7 @@
                     <div class="col-lg-1 col-lg-offset-5 col-xs-1 col-xs-offset-3 col-sm-1 col-sm-offset-5">
                         <button id="submit" type="submit" class="btn btn-primary">Lanjutkan</button>
                     </div>
-                </div> 
+                </div>
             </form>
             <br>
 		</div>

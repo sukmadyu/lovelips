@@ -66,10 +66,10 @@ EMAIL_USE_TLS = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ahp_project',
-        'USER': 'root',
-        'PASSWORD':'',
-        'HOST':'localhost'
+        'NAME': 'sukmadyu$ahp_project',
+        'USER': 'sukmadyu',
+        'PASSWORD':'mysqlpassword',
+        'HOST':'mysql.server'
     }
 }
 
