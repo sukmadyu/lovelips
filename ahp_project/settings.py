@@ -36,7 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'lovelips'
+    'lovelips',
+    'codingcamp',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -66,10 +67,10 @@ EMAIL_USE_TLS = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ahp_project',
+        'NAME': 'lovelips',
         'USER': 'root',
         'PASSWORD':'',
-        'HOST':'localhost'
+        
     }
 }
 
