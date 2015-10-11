@@ -75,10 +75,6 @@
     }
 }
 
-.img-size{
-	width: 426px;
-	height: 239.625px;
-}
 
 #photo .portfolio-item .portfolio-box {
     display: block;
@@ -108,15 +104,13 @@
     margin-left: 35px;
     font-size: 20px;
     background-color: rgba(241, 241, 234, 0.75);
-	padding-left: 15px;
-    padding-top: 15px;
-    padding-right: 15px;
+	padding: 15px;    
     border-bottom-width: 20px;
-    height: 190px;
+    height: auto;
     }
 
 #tutor h1{
-	font-size: 90px;
+	font-size: 5em;
 	background-color: rgba(241, 241, 234, 0.75);
 	height: 110px;
     padding-top: 8px;
@@ -160,4 +154,14 @@
 	width: 30%;
 	padding-bottom: 30px;
 	padding-top: 30px;
+}
+.form-join{
+	border: 3px solid #E45009; 
+	border-radius: 4px; 
+	padding-top: 10px; 
+	padding-bottom: 10px; 
+	border-bottom-width: 3px; 
+	width: 100%; 	
+	height: 40px !important;
+    overflow-y: hidden;
 }
