@@ -14,6 +14,8 @@
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'codingcamp/css/bootstrap.css'%}" rel="stylesheet">
 
+    <link rel="stylesheet" href="{% static 'codingcamp/css/style.css'%}" type="text/css">
+    
     <!-- Custom CSS -->
     <link href="{% static 'codingcamp/css/agency.css'%}" rel="stylesheet">
     
@@ -23,7 +25,7 @@
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="{% static 'codingcamp/css/animate.min.css'%}" type="text/css">
     
-    <link rel="stylesheet" href="{% static 'codingcamp/css/style.css'%}" type="text/css">
+    
     
     <link rel="stylesheet" href="{% static 'codingcamp/css/map.css'%}" type="text/css">
 
@@ -87,7 +89,7 @@
                         <a class="page-scroll" href="#photo" style="left: 10px;">Photos</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#students" style="left: 10px;">Student's web</a>
+                        <a class="page-scroll" href="#students-web" style="left: 10px;">Student's web</a>
                     </li>
                 </ul>
             </div>
@@ -216,51 +218,51 @@
                 </div>
             </div>
 			<div class="row">
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4">
                     <a href="http://ai2.appinventor.mit.edu/">
                         <img src="{% static 'codingcamp/img/app inventor logo.png'%}" class="img-responsive img-centered" title="App Inventor">
                     </a>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4">
                     <a href="https://www.arduino.cc/">
                         <img src="{% static 'codingcamp/img/arduino.png'%}" class="img-responsive img-centered" title="Arduino">
                     </a>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4">
                     <a href="http://codekingdoms.com/">
                         <img src="{% static 'codingcamp/img/codekingdom.png'%}" class="img-responsive img-centered" title="Codekingdoms">
                     </a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4">
                     <a href="#">
                         <img src="{% static 'codingcamp/img/HTML5.png'%}" class="img-responsive img-centered" title="HTML5">
                     </a>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4">
                     <a href="#">
                         <img src="{% static 'codingcamp/img/javascript.png'%}" class="img-responsive img-centered" title="Javascript">
                     </a>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4 ">
                     <a href="https://www.tynker.com/">
                         <img src="{% static 'codingcamp/img/tynker.jpg'%}" class="img-responsive img-centered" title="Tynker">
                     </a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4">
                     <a href="http://makeymakey.com/">
                         <img src="{% static 'codingcamp/img/makey.png'%}" class="img-responsive img-centered" title="Makey Makey" style="width: 50%;">
                     </a>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4">
                     <a href="https://www.python.org/">
                         <img src="{% static 'codingcamp/img/python.png'%}" class="img-responsive img-centered" title="Python">
                     </a>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4">
                     <a href="https://scratch.mit.edu/">
                         <img src="{% static 'codingcamp/img/scratch.png'%}" class="img-responsive img-centered" title="Scratch">
                     </a>
@@ -319,12 +321,14 @@
     </section>
     
     <!-- Photos Grid Section -->
-    <section id="photo" class=" no-padding">
+    <section id="photo" class="no-padding">
+		<!--
 		<div class="col-lg-12 text-center">
             <h2 class="section-heading">Photos</h2>
         </div>
+        -->
         <div class="container-fluid">
-            <div class="row no-gutter">
+            <div class="row no-gutter" style=" margin-top:50px;">
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-box" data-toggle="modal">
                         <div class="portfolio-hover">
@@ -332,7 +336,7 @@
                                 <i class="fa fa-expand fa-3x"></i>
                             </div>
                         </div>
-                        <img src="{% static 'codingcamp/img/hackathon1.jpg'%}" class="img-responsive" alt="">
+                        <img src="{% static 'codingcamp/img/photo/scratch.jpg'%}" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -342,7 +346,7 @@
                                 <i class="fa fa-expand fa-3x"></i>
                             </div>
                         </div>
-                        <img src="{% static 'codingcamp/img/kids2.png'%}" class="img-responsive" alt="">
+                        <img src="{% static 'codingcamp/img/photo/game.jpg'%}" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -352,7 +356,7 @@
                                 <i class="fa fa-expand fa-3x"></i>
                             </div>
                         </div>
-                        <img src="{% static 'codingcamp/img/hackathon2.jpg'%}" class="img-responsive" alt="">
+                        <img src="{% static 'codingcamp/img/photo/web.jpg'%}" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -362,7 +366,7 @@
                                 <i class="fa fa-expand fa-3x"></i>
                             </div>
                         </div>
-                        <img src="{% static 'codingcamp/img/hackathon3.jpg'%}" class="img-responsive" alt="">
+                        <img src="{% static 'codingcamp/img/photo/code.jpg'%}" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -372,7 +376,7 @@
                                 <i class="fa fa-expand fa-3x"></i>
                             </div>
                         </div>
-                        <img src="{% static 'codingcamp/img/header.jpg'%}" class="img-responsive" alt="">
+                        <img src="{% static 'codingcamp/img/photo/appinv.jpg'%}" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -382,8 +386,82 @@
                                 <i class="fa fa-expand fa-3x"></i>
                             </div>
                         </div>
-                        <img src="{% static 'codingcamp/img/founders.jpg'%}" class="img-responsive" alt="">
+                        <img src="{% static 'codingcamp/img/photo/python.jpg'%}" class="img-responsive" alt="">
                     </a>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal7" class="portfolio-box" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{% static 'codingcamp/img/photo/tv.jpg'%}" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal8" class="portfolio-box" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{% static 'codingcamp/img/photo/girl.jpg'%}" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal9" class="portfolio-box" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{% static 'codingcamp/img/photo/girls.jpg'%}" class="img-responsive" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Studeent's Web -->
+    <section id="students-web" class="bg-light-gray">
+        <div class="container">
+            <div class="row" style="padding-bottom:10px;">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Student's Web</h2>
+                    <!--<h3 class="section-subheading text-muted">Beberapa website karya .</h3>-->
+                </div>
+            </div>
+            <div class="row">                             
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://irfanramadhiya.pythonanywhere.com/" target="_blank">                        
+                        <img src="{% static 'codingcamp/img/student/irfan.png'%}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Irfan</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://guplecookies.com/intro.html" target="_blank">
+                        
+                        <img src="{% static 'codingcamp/img/student/alfie.png'%}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Alfie</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://anonthecarandcodeguy.pythonanywhere.com/" target="_blank">
+                        
+                        <img src="{% static 'codingcamp/img/student/fadhilan.png'%}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Fadhilan</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -416,7 +494,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Photo Details Go Here -->
-                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/hackathon1.jpg'%}" alt="">
+                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/photo/scratch.jpg'%}" alt="">                            
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Photo</button>
                         </div>
                     </div>
@@ -438,7 +516,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/kids2.png'%}" alt="">
+                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/photo/game.jpg'%}" alt="">
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Photo</button>
                         </div>
                     </div>
@@ -461,7 +539,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Photo Details Go Here -->
-                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/hackathon2.jpg'%}" alt="">
+                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/photo/web.jpg'%}" alt="">
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Photo</button>
                         </div>
                     </div>
@@ -484,7 +562,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/hackathon3.jpg'%}" alt="">
+                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/photo/code.jpg'%}" alt="">
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Photo</button>
                         </div>
                     </div>
@@ -507,7 +585,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/header.jpg'%}" alt="">
+                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/photo/appinv.jpg'%}" alt="">
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Photo</button>
                         </div>
                     </div>
@@ -530,7 +608,74 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/founders.jpg'%}" alt="">
+                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/photo/python.jpg'%}" alt="">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Photo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Portfolio Modal 7 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/photo/tv.jpg'%}" alt="">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Photo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 8 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/photo/girl.jpg'%}" alt="">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Photo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 9 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img class="img-responsive img-centered" src="{% static 'codingcamp/img/photo/girls.jpg'%}" alt="">
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Photo</button>
                         </div>
                     </div>
