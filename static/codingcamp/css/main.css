@@ -1,0 +1,56 @@
+/* FONT FACE DEFINITION */
+
+@font-face {
+	font-family: "Josefin Light";
+	src: url("../fonts/JosefinSans-Light.ttf") format("truetype");
+	
+}
+
+@font-face {
+	font-family: "Josefin Bold";
+	src: url("../fonts/JosefinSans-Bold.ttf") format("truetype");
+	
+}
+
+@font-face {
+	font-family: "Quicksand Book";
+	src: url("../fonts/Quicksand Book.otf") format("truetype");
+	
+}
+
+@font-face {
+	font-family: "Quicksand Bold";
+	src: url("../fonts/Quicksand Bold.otf") format("truetype");
+	
+}
+
+@font-face {
+	font-family: "Quicksand Regular";
+	src: url("../fonts/Quicksand-Regular_0.otf") format("truetype");
+	
+}
+
+@font-face {
+	font-family: "Quicksand Light";
+	src: url("../fonts/Quicksand Light.otf") format("truetype");
+
+}
+
+@font-face {
+	font-family: "Josefin Regular";
+	src: url("../fonts/JosefinSans-Regular.ttf") format("truetype");
+
+}
+
+@font-face {
+	font-family: "Josefin Light";
+	src: url("../fonts/JosefinSans-Light.ttf") format("truetype");
+
+}
+
+
+
+.heading-slider-bold {
+	font-family: Josefin Bold;
+	font-size: 3.76em;
+}

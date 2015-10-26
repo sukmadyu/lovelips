@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Quicksand Book;
 }
 
 .text-muted {
@@ -52,7 +52,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Josefin Bold;
     font-weight: 800;
     color: #008AFF;
 }
@@ -127,7 +127,7 @@ fieldset[disabled] .btn-primary.active {
     border-color: #E45009;
     border-radius: 3px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Josefin Bold;
     font-size: 18px;
     font-weight: 700;
     color: #fff;
@@ -180,7 +180,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: Josefin Bold;
     color: #E45009;
 }
 
@@ -211,7 +211,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Josefin Bold;
     font-weight: 400;
     letter-spacing: 1px;
     color: #008AFF;
@@ -219,20 +219,20 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
-    outline: 0;
-    color: #E45009;
+    
+    
 }
 
 .navbar-default .navbar-nav>.active>a {
-    border-radius: 0;
-    color: #fff;
-    background-color: #E45009;
+    
+    
+    
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
-    color: #fff;
-    background-color: #E45009;
+    
+    
 }
 
 @media(min-width:1200px) {
@@ -254,7 +254,7 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .navbar-default .navbar-nav>.active>a {
-        border-radius: 3px;
+        
     }
 
     .navbar-default.navbar-shrink {
@@ -296,7 +296,7 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Josefin Bold;
     font-size: 2.87em;
     font-weight: 700;
     line-height: 50px;
@@ -319,12 +319,12 @@ header .intro-text .intro-heading {
     header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: uppercase;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: Josefin Bold;
         font-size: 75px;
         font-weight: 700;
         line-height: 75px;
     }
-}4
+}
 
 section {
     padding: 10px 0;
@@ -333,15 +333,15 @@ section {
 section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 40px;
+    font-size: 20pt;
 }
 
 section h3.section-subheading {
     text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: large;
+    font-family: Quicksand Book;
+    font-size: 12pt;
     font-style: inherit;
-    font-weight: 100;
+    
 }
 
 @media(min-width:768px) {
@@ -856,7 +856,7 @@ ul.social-buttons li a:active {
 
 ::selection {
     text-shadow: none;
-    background: #E45009;
+    
 }
 
 img::selection {
