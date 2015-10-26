@@ -114,9 +114,9 @@
                     <form name="sentEmail" id="emailForm" novalidate>
                         <div class="row">
 							<div class="col-md-2"></div>
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea  class="form-control form-join" placeholder="[Enter email] untuk bergabung dengan kami" id="message" required data-validation-required-message="Please enter a email"></textarea>
+                                    <textarea  class="form-control form-join" placeholder="Enter email to join mailing list and receive monthly newsletter" id="message" required data-validation-required-message="Please enter a email"></textarea>
                                     <p class="help-block text-danger" style="color: ff0000;"></p>
                                 </div>
                             </div>
@@ -136,11 +136,7 @@
     <section id="contact" style="height: auto;">
         <div class="container">
             <div class="row" style="color : #fff;">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Bergabung bersama kami!</h2>
-                    <hr class="primary">
-                    <p >Anda ingin bergabung di Codingcamp? Silakan hubungi atau kirim pesan melalui nomor telepon dan alamat email berikut.</p>
-                </div>
+                
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x wow bounceIn"></i>
                     <p>0813-1662-7137</p>
@@ -172,9 +168,24 @@
 				    <h2 class="section-heading" style="margin-top: 60px; color: #E45009;">"Don't just play with your phone, program it." </h2>
                     <h3 class="section-subheading text-muted" style="margin-bottom: 20px;">Barrack Obama</h3>
                     <!-- 16:9 aspect ratio -->
-					<div class="embed-responsive embed-responsive-16by9">
-						
-						<iframe class="embed-responsive-item" width="500" src="https://www.youtube.com/embed/yE6IfCrqg3s" frameborder="0" allowfullscreen></iframe>
+                    <div class="row">
+						<div class="col-lg-2"></div>
+						<div class="col-lg-8">
+							<div class="embed-responsive embed-responsive-16by9">						
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yE6IfCrqg3s" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="col-lg-2"></div>
+					</div>
+					
+					<div class="row" style="margin-top:20px;">
+						<div class="col-lg-2"></div>
+						<div class="col-lg-8">
+							<div class="embed-responsive embed-responsive-16by9">						
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="col-lg-2"></div>
 					</div>
             </div>
         </div>
@@ -278,7 +289,7 @@
                 <div class="col-lg-12 text-center" style="font-weight: 500;">
 					<h2 class="section-heading" style="color : #fff;">Adult Class</h2>
 					<hr class="light">
-					<h3 class="section-subheading" style="color : #fff;">This is description for Adult Class in Codingcamp.</h3>
+					    <img src="{% static 'codingcamp/img/poster Coding Adults.jpg'%}" class="img-responsive img-centered" title="Adult Class">
                 </div>
             </div>
         </div>
@@ -494,7 +505,71 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="row">                             
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#" target="_blank">                        
+                        <img src="{% static 'codingcamp/img/student/acid.png'%}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Acid</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#">
+                        
+                        <img src="{% static 'codingcamp/img/student/kafka.png'%}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Kafka</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#">
+                        
+                        <img src="{% static 'codingcamp/img/student/kenzie.png'%}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Kenzie</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+            </div>        
+            <div class="row">                             
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#">                        
+                        <img src="{% static 'codingcamp/img/student/lintang.png'%}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Lintang</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#">
+                        
+                        <img src="{% static 'codingcamp/img/student/rakan.png'%}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Rakan</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#">
+                        
+                        <img src="{% static 'codingcamp/img/student/ranu.png'%}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Ranu</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
     </section>
 
     <footer>
