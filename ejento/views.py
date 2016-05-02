@@ -275,7 +275,7 @@ class DetailAHPView(View):
                                                   'bobot_up_a':up_arr_a,'bobot_up_b':up_arr_b,'bobot_up_c':up_arr_c,
                                                   'bobot_sp_a':sp_arr_a,'bobot_sp_b':sp_arr_b,'bobot_sp_c':sp_arr_c,
                                                   'kri_a':kri_a,'kri_b':kri_b,'kri_c':kri_c,
-						  'kri_d':kri_d,'kri_e':kri_e,'kri_e':kri_e,'kri_f':kri_f,
+						  'kri_d':kri_d,'kri_e':kri_e,'kri_f':kri_f,
 						  'kri_g':kri_g,'kri_h':kri_h,'kri_i':kri_i,
 						  'kri_j':kri_j,'kri_k':kri_k,'kri_l':kri_l,                                                
 						  'bobot_pp':kri_pp,'bobot_up':kri_up,'bobot_sp':kri_sp,
@@ -321,7 +321,7 @@ class KonsistensiAHPView(View):
         kri_arr=kri_arr.reshape(3,1)
 
         return render(request,self.template_name,{'kri_a':kri_a,'kri_b':kri_b,'kri_c':kri_c,
-						'kri_d':kri_d,'kri_e':kri_e,'kri_e':kri_e,'kri_f':kri_f,
+						'kri_d':kri_d,'kri_e':kri_e,'kri_f':kri_f,
 						'kri_g':kri_g,'kri_h':kri_h,'kri_i':kri_i,
 						'kri_j':kri_j,'kri_k':kri_k,'kri_l':kri_l,
 						'bobot_pp':kri_pp,'bobot_up':kri_up,'bobot_sp':kri_sp,

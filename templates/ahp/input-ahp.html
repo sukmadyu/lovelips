@@ -2,7 +2,7 @@
 {% block main %}
 {% load staticfiles %}
     <!-- Page Heading -->
-	<section class="bg-header" style="padding-top: 120px;padding-bottom: 120px;">
+	<section class="bg-header" style="padding-top: 10px;padding-bottom: 10px;">
 		<div class="container">
 			<div class="row">
                 <div class="col-xs-8 col-xs-offset-2" style="margin-left: 0px; width: 300px;">
@@ -24,7 +24,7 @@
 								<a href="{% url 'input-nama' ahp.id %}">Input Nama Produk</a>
                             </li>
                             <li class="active">
-                                Input Detail Produk
+                                Input Detail Agen
                             </li>
                         </ol>
                     </div>
@@ -37,134 +37,77 @@
             {% csrf_token %}
 			<div class="row">
 					<div class="col-xs-1"></div>
-                    <div class="col-lg-1 col-md-1 col-xs-2">
-						<span class="fa-2x">
-							<div class="input-kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/rupiah.jpg" %} alt="">
-                            </div>
+                    <div class="col-lg-1 col-md-1 col-xs-2" style="right: 70px;">
+						<span class="promo">
+							<i class="mdi-image-filter-1" style="color: #3BC896;"></i>
 						</span>
                     </div>
-                    <div class="col-xs-7"><h4>Harga</h4></div>
-                </div>
+                    <div class="col-xs-7"><h4>Premi Pertama (PP)</h4></div>
+            </div>
             <br>
-            <p>Pada kriteria harga, anda harus memasukan harga tiap produk menggunakan satuan mata uang Rupiah (Rp), tanpa tanda titik atau koma pada nominalnya.</p>
+            <p>Pada kriteria Premi Pertama, anda harus memasukan PP tiap agen tanpa tanda titik atau koma pada nominalnya.</p>
 		    <label>{{nama_a}}</label>
-                    <div> {{ form.harga_a }}</div>
+                    <div> {{ form.pp_a }}</div>
             <br>
             <label>{{nama_b}}</label>
-                    <div> {{ form.harga_b }}</div>
+                    <div> {{ form.pp_b }}</div>
             <br>
 		    <label>{{nama_c}}</label>
-                    <div> {{ form.harga_c }}</div> 
+                    <div> {{ form.pp_c }}</div> 
 			<br>
 			<br>
 			<div class="row">
 				<div class="col-xs-1"></div>
-				<div class="col-lg-1 col-md-1 col-xs-2">
-				<span class="fa-2x">
-					<div class="input-kriteria-image">
-						<img class="img-circle img-responsive" src={% static "img/netto.jpg" %} alt="">
-                    </div>
+				<div class="col-lg-1 col-md-1 col-xs-2" style="right: 70px;">
+				<span class="promo">
+					<i class="mdi-action-account-balance-wallet" style="color: #3BC896;"></i>
 				</span>
 				</div>
 				<div class="col-xs-7">
-					<h4>BERAT BERSIH PRODUK</h4>
+					<h4>Uang Pertanggungan (UP)</h4>
 				</div>
 			</div>
 			<br>
-			<p>Pada kriteria berat bersih produk ini, anda dapat memasukan berat bersih produk dalam satuan gram (gr) atau mililiter (ml). Namun yang perlu diingat, anda harus menyamakan satuan tiap produk, sehingga perhitungan keputusan berjalan dengan baik.</p>
+			<p>Masukan nominal Uang Pertanggungan tanpa tanda titik dan koma</p>
             <label>{{nama_a}}</label>
-                    <div> {{ form.isi_a }}</div>
+                    <div> {{ form.up_a }}</div>
             <br>
 		    <label>{{nama_b}}</label>
-                    <div> {{ form.isi_b }}</div>
+                    <div> {{ form.up_b }}</div>
             <br>
 		    <label>{{nama_c}}</label>
-                    <div> {{ form.isi_c }}</div>
+                    <div> {{ form.up_c }}</div>
 			<br> 
 			<br>
 			<div class="row">
 				<div class="col-xs-1"></div>
-				<div class="col-lg-1 col-md-1 col-xs-2">
-				<span class="fa-2x">
-					<div class="input-kriteria-image">
-						<img class="img-circle img-responsive" src={% static "img/pao.jpg" %} alt="">
-                    </div>
+				<div class="col-lg-1 col-md-1 col-xs-2" style="right: 70px;">
+				<span class="promo">
+					<i class="mdi-action-receipt" style="color: #3BC896;"></i>
 				</span>
 				</div>
 				<div class="col-xs-7">
-					<h4>PERIOD AFTER OPENING</h4>
+					<h4>Surat Permintaan (SP)</h4>
 				</div>
 			</div>
 			<br>
-			<p>Pada kriteria ini, anda harus memberi tiap produk lama PAO dengan satuan bulan sesuai dengan yang tertera pada kemasan produknya. Jika produk tidak memiliki label PAO pada kemasannya, maka beri produk tersebut nilai 1.</p>
+			<p>Pada kriteria ini, anda harus memasukan jumlah Surat Permintaan yang dimiliki agen.</p>
 		    <label>{{nama_a}}</label>
-                    <div> {{ form.pao_a }}</div>  
+                    <div> {{ form.sp_a }}</div>  
             <br>
 		    <label>{{nama_b}}</label>
-                    <div> {{ form.pao_b }}</div> 
+                    <div> {{ form.sp_b }}</div> 
             <br> 
 		    <label>{{nama_c}}</label>
-                    <div> {{ form.pao_c }}</div>
+                    <div> {{ form.sp_c }}</div>
 			<br>
 			<br>
-			<div class="row">
-				<div class="col-xs-1"></div>
-				<div class="col-lg-1 col-md-1 col-xs-2">
-				<span class="fa-2x">
-					<div class="input-kriteria-image">
-						<img class="img-circle img-responsive" src={% static "img/time.jpg" %} alt="">
-                    </div>
-				</span>
-				</div>
-				<div class="col-xs-7">
-					<h4>DAYA TAHAN PRODUK (jam)</h4>
-				</div>
-			</div>
-			<br>
-			<p>Pada kriteria daya tahan produk, anda harus memberi nilai dengan satuan jam.</p>
-		    <label>{{nama_a}}</label>
-                    <div> {{ form.time_a }}</div>
-            <br>
-            <label>{{nama_b}}</label>
-                    <div> {{ form.time_b }}</div>
-            <br>
-		    <label>{{nama_c}}</label>
-                    <div> {{ form.time_c }}</div> 
-			<br>
-			<br>
-			<div class="row">
-				<div class="col-xs-1"></div>
-				<div class="col-lg-1 col-md-1 col-xs-2">
-				<span class="fa-2x">
-					<div class="input-kriteria-image">
-						<img class="img-circle img-responsive" src={% static "img/cf.jpg" %} alt="">
-                    </div>
-				</span>
-				</div>
-				<div class="col-xs-7">
-					<h4>ANIMAL CRUELTY FREE</h4>
-				</div>
-			</div>
-			<br>
-			<p>Khusus untuk kriteria Animal Cruelty-Free, jika produk memiliki label kriteria ini, beri nilai produk tersebut nilai 1. Namun jika tidak terdapat label kriteria ini, beri produk tersebut nilai 9.</p>
-		    <label>{{nama_a}}</label>
-                    <div> {{ form.cruelty_free_a }}</div>
-            <br>
-            <label>{{nama_b}}</label>
-                    <div> {{ form.cruelty_free_b }}</div>
-            <br>
-		    <label>{{nama_c}}</label>
-                    <div> {{ form.cruelty_free_c }}</div> 
-			<br> 
-			           
 			<div class="row">
                     <div class="col-lg-1 col-lg-offset-5 col-xs-1 col-xs-offset-3">
 						
                         <button type="submit" class="btn btn-primary">Lanjutkan</button>
                     </div>
             </div>
-            <br> 
 		</form>       
 		</div>
 </div>

@@ -294,7 +294,7 @@ class KonsistensiAHPView(View):
         kri_a=float(kri[0])
         kri_b=float(kri[1])
         kri_c=float(kri[2])
-	#kri_d=float(kri[3])
+	kri_d=float(kri[3])
 	kri_e=float(kri[4])
 	kri_f=float(kri[5])
 	kri_g=1/kri_a
@@ -321,7 +321,7 @@ class KonsistensiAHPView(View):
         kri_arr=kri_arr.reshape(3,1)
 
         return render(request,self.template_name,{'kri_a':kri_a,'kri_b':kri_b,'kri_c':kri_c,
-						'kri_d':kri_d,'kri_e':kri_e,'kri_e':kri_e,'kri_f':kri_f,
+						'kri_d':kri_d,'kri_e':kri_e,'kri_f':kri_f,
 						'kri_g':kri_g,'kri_h':kri_h,'kri_i':kri_i,
 						'kri_j':kri_j,'kri_k':kri_k,'kri_l':kri_l,
 						'bobot_pp':kri_pp,'bobot_up':kri_up,'bobot_sp':kri_sp,
