@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from lovelips.views import HomeView
+from ejento.views import HomeView
 urlpatterns = patterns('',
     # Examples:
      url(r'^$', HomeView.as_view(), name='index'),
@@ -10,6 +10,6 @@ urlpatterns = patterns('',
     
     url(r'^admin/', include(admin.site.urls)),
     
-    url(r'^ahp/',include('lovelips.urls')),
+    url(r'^ahp/',include('ejento.urls')),
 )
 

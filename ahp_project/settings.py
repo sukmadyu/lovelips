@@ -36,8 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'lovelips',
+    'ejento',
     'codingcamp',
+    'tugas',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -60,17 +61,14 @@ WSGI_APPLICATION = 'ahp_project.wsgi.application'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'lovelips.ahp@gmail.com'
-EMAIL_HOST_PASSWORD = 'lovelipspassword'
+EMAIL_HOST_USER = 'sukmadyu@gmail.com'
+EMAIL_HOST_PASSWORD = 'ejentopassword'
 EMAIL_USE_TLS = True
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lovelips',
-        'USER': 'root',
-        'PASSWORD':'',
-        
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

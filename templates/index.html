@@ -9,13 +9,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Lovelips AHP</title>
+    <title>Ējento</title>
     {% load staticfiles %}
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="{% static 'css/agency.css' %}" rel="stylesheet">
+    <link href="{% static 'min/plugin-min.css'%}" type="text/css" rel="stylesheet">
+    <link href="{% static 'min/custom-min.css'%}" type="text/css" rel="stylesheet" >
 
     <!-- Custom Fonts -->
     <link href="{% static 'font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
@@ -37,140 +39,98 @@
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+<div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="{% url 'index' %}">Lovelips AHP</a>
-            </div>
-{%block navbar%}{%endblock%}
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#tentang">Tentang</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#kriteria">Kriteria</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#panduan">Panduan</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#kontak">Kontak</a>
-                    </li>
-                    <li>
-                        <a class=" btn-xl" href="{% url 'input-kri' %}" style="margin-left:10px;">MULAI</a>
-                    </li>
-
+            <div class="nav-wrapper">
+            <a href=""{% url 'index' %}"" id="logo-container" class="brand-logo"> Ējento</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#tentang"><b>Tentang</b></a></li>
+                    <li><a href="#kriteria"><b>Kriteria</b></a></li>
+					<li><a href="#panduan"><b>Panduan</b></a></li>
+					<li><a href="#team"><b>Team</b></a></li>
+                    <li><a href="#kontak"><b>Kontak</b></a></li>
+                    <li><a href="{% url 'input-kri' %}" target="_blank"><b>Mulai</b></a></li>
                 </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+                {%block navbar%}{%endblock%}
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#kriteria">Kriteria</a></li>
+					<li><a href="#panduan">Panduan</a></li>
+					<li><a href="#team"><b>Team</b></a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                    <li><a href="{% url 'input-kri' %}">Mulai</a></li>
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu" style="margin-left: 10px;"></i></a>  
+			</div>
         </div>
-        <!-- /.container-fluid -->
     </nav>
+</div>
 
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="intro-text">
-
-                <div class="intro-heading" style="color:  #CE1757;">Lovelips AHP</div>
-                <a href="{% url 'input-kri' %}" class="page-scroll btn btn-xl">MULAI</a>
-            </div>
-        </div>
+        <div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+				<h1 class="text_h center header cd-headline letters type">
+					<span>Ējento</span> 
+					<span class="cd-words-wrapper waiting">
+						<b class="is-visible">SPK Penentu Agen Asuransi Terbaik</b>
+					</span>
+				</h1>
+			</div>
+		</div>
     </header>
 
 	<!-- Tentang Section -->
-	    <section class="bg-primary" id="tentang">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Kami mengerti apa yang anda butuhkan!</h2>
-                    <hr class="light">
-                    <p class="text-faded">Lovelips AHP adalah sebuah aplikasi penunjang keputusan yang menggunakan metode AHP. Metode Analytical Hirearchy Process (AHP) yang dapat memberikan keputusan yang tepat dari permasalahan yang rumit dan tidak terstruktur. Aplikasi ini akan memberikan detail keputusan dari hasil perhitungan menggunakan metode AHP sehingga anda dapat yakin dengan keputusan yang diberikan.</p>
-                    <br>
-                    <p class="text-faded">Aplikasi ini dibuat oleh Dyah Ayu S. untuk melengkapi sebagian syarat dalam mencapai gelar sarjana setara sarjana muda di Universitas Gunadarma</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
+			<div  class="section scrollspy" id="tentang">
+				<div class="container">
+					<div class="row">
+						<div  class="col s12">
+							<h2 class="center header text_h2"> Selamat Datang! di website <span class="span_h2"> SPK  </span> kami. </h2>
+							<hr> </hr>
+							<span style="color:#3BC896"> Ējento </span> adalah sebuah aplikasi penunjang keputusan penentu agen (karyawan) terbaik. Aplikasi ini menggunakan metode <i> Analytical Hierarchy Process </i>(AHP) yang dapat memecahkan masalah yang kompleks, rumit, dan tak terstruktur guna membantu manajer dalam mengambil keputusan.
+						</div> 
+					</div>
+				</div>
+			</div>
+
 
     <!-- Kriteria Section -->
-    <section class="kriteria" id="kriteria">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Kriteria</h2>
-                    <h3 class="section-subheading text-muted">Aplikasi penunjang keputusan ini menggunakan lima kriteria yang sering dipakai untuk memilih produk pemulas bibir. </h3>
+    <div id="kriteria" class="bg-primary section scrollspy">
+    <div class="container">
+		<div class="row">
+        	<h2 class="header text_b">KRITERIA </h2>
+			<p> Untuk mendapatkan hasil dengan alternatif terbaik, maka aplikasi penunjang keputusan ini membutuhkan tiga kriteria </p>
+		
+        
+			<div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-image-filter-1"></i>
+					<h5 class="promo-caption">Premi Pertama (PP)</h5>
+                    <p class="light center">Premi pertama adalah premi yang pertama kali dibayarkan, angkanya sesuai dengan perjanjian
+yang tertera dalam polis. Kriteria ini mutlak lebih penting daripada kriteria lain.</p>
                 </div>
             </div>
-            <div class="row text-center">
-                <div class="col-md-4" style="margin-bottom: 1cm;">
-                    <span class="fa-stack fa-4x">
-                        <div class="kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/rupiah.jpg" %} alt="">
-                            </div>
-                    </span>
-                    <h4 class="service-heading">Harga</h4>
-                    <p class="text-muted">Harga telah menjadi kriteria utama untuk memilih produk pemulas bibir bagi banyak kaum wanita.</p>
-                </div>
-                <div class="col-md-4" style="margin-bottom: 1cm;">
-                    <span class="fa-stack fa-4x">
-                        <div class="kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/netto.jpg" %} alt="">
-                            </div>
-                    </span>
-                    <h4 class="service-heading">Berat Bersih</h4>
-                    <p class="text-muted">Berat bersih ini mencakup satuan isi berupa gram (gr) atau mililiter (ml).</p>
-                </div>
-                <div class="col-md-4" style="margin-bottom: 1cm;">
-                    <span class="fa-stack fa-4x">
-                        <span class="fa-stack fa-4x">
-                        <div class="kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/pao.jpg" %} alt="">
-                            </div>
-                    </span>
-                    </span>
-                    <h4 class="service-heading">Period After Opening (PAO)</h4>
-                    <p class="text-muted">Simbol yang menunjukan masa pakai produk setelah kemasannya dibuka.</p>
+			
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-action-account-balance-wallet"></i>
+                    <h5 class="promo-caption">Uang Pertanggungaan (UP)</h5>
+                    <p class="light center">Uang Pertanggungan (Face Amount) - Uang Pertangggungan yang tercantum pada halaman polis yang akan dibayar apabila terjadi kematian atau kondisi polis lain yaitu dibayarkan pada saat masa pertanggungan berakhir sesuai dengan macam asuransi yang diambil. Kriteria ini sedikit lebih penting daripada elemen lain.</p>
                 </div>
             </div>
-            <div class="row text-center">
-                <div class="col-md-6" style="margin-bottom: 1cm;">
-                    <span class="fa-stack fa-4x">
-                        <span class="fa-stack fa-4x">
-                        <div class="kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/cf.jpg" %} alt="">
-                            </div>
-                    </span>
-                    </span>
-                    <h4 class="service-heading">Animal Cruelty Free</h4>
-                    <p class="text-muted">Kriteria ini ditunjukan untuk produk yang bebas dari penyiksaan hewan saat dilakukan uji coba produk.Kriteria ini biasa dipakai juga sebagai alternatif produk selain produk Halal.</p>
-                </div>
-                <div class="col-md-6" style="margin-bottom: 1cm;">
-                    <span class="fa-stack fa-4x">
-                        <span class="fa-stack fa-4x">
-                        <div class="kriteria-image">
-                                <img class="img-circle img-responsive" src={% static "img/time.jpg" %} alt="">
-                            </div>
-                    </span>
-                    </span>
-                    <h4 class="service-heading">Daya Tahan Produk</h4>
-                    <p class="text-muted">Kriteria ini juga paling banyak dicari dalam memilih produk pemulas bibir yang tepat.</p>
+			
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-action-receipt"></i>
+                    <h5 class="promo-caption">Surat Permintaan (SP)</h5>
+                    <p class="light center">Surat yang digunakan untuk komunikasi antara calon nasabah dan pemegang polis untuk mendapatkan informasi tentang macam/jenis dan spesifikasinya, jasa, serta kebijaksanaan perusahaan tentang pelayananseperti cara pembayaran, pemberian layanan penjualan, layanan purna jual, cara pengiriman, dan cara penyerahan. Kriteria ini sama pentingnya dengan kriteria lain. Pada aplikasi ini, masukan jumlah surat permintaan yang diminta agen.</p>
                 </div>
             </div>
-        </div>
-    </section>
+		</div>
+	</div>
+</div>
 
     <!-- Panduan Section -->
     <section id="panduan">
@@ -178,7 +138,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Panduan</h2>
-                    <h3 class="section-subheading text-muted">Berikut ini langkah-langkah pembuatan keputusan menggunakan Lovelips AHP.</h3>
+                    <h3 class="section-subheading text-muted">Berikut ini langkah-langkah pembuatan keputusan menggunakan aplikasi ini.</h3>
                 </div>
             </div>
             <div class="row">
@@ -186,7 +146,7 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src={% static "img/number-1.png" %} alt="">
+                                <img class="img-circle img-responsive" src={% static "img/step-one.png" %} alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -200,7 +160,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src={% static "img/number-2.png" %} alt="">
+                                <img class="img-circle img-responsive" src={% static "img/step-two.png" %} alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -214,7 +174,7 @@
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src={% static "img/number-3.png" %} alt="">
+                                <img class="img-circle img-responsive" src={% static "img/step-three.png" %} alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -222,13 +182,13 @@
                                     <h4 class="subheading">Input Nama Produk</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Pada tahap ini, Anda hanya dapat memasukan 3 merek produk pemulas bibir. Jika produk memiliki merek yang sama, berikan karakter yang membedakan produk-produk tersebut.</p>
+                                    <p class="text-muted">Pada tahap ini, Anda hanya dapat memasukan 3 nama agen yang akan dipilih.</p>
                                 </div>
                             </div>
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src={% static "img/number-4.png" %} alt="">
+                                <img class="img-circle img-responsive" src={% static "img/step-four.png" %} alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -236,8 +196,7 @@
                                     <h4 class="subheading">Input Bobot Produk</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Pastikan bobot yang dimasukan masih dalam satuan yang sama. Misalnya pada kriteria Berat Bersih ada dua macam satuan, yaitu satuan mililiter (ml) dan satuan gram (g).</p>
-                                    <p class="text-muted">Selain itu, pada kriteria Animal Cruelty-Free, berikan bobot pada bobot yang memiliki keterangan kriteria tersebut dengan nilai 5, sedangkan bagi produk yang tidak memiliki ketertangan kriteria tersebut, bobot yang harus dimasukan adalah 1</p>
+                                    <p class="text-muted">Pastikan bobot yang dimasukan masih dalam satu kriteria yang sama</p>
                                 </div>
                             </div>
                         </li>
@@ -251,7 +210,7 @@
                                     <h4 class="subheading">Hasil Akhir</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Tahap terakhir yang menunjukan informasi hasil keputusan dan hasil penilaian berupa tabel, grafik, dan penjelasan singkat</p>
+                                    <p class="text-muted">Tahap terakhir yang menunjukan informasi hasil keputusan dan hasil penilaian berupa grafik, dan penjelasan singkat</p>
                                 </div>
                             </div>
                         </li>
@@ -267,41 +226,82 @@
             </div>
         </div>
     </section>
+    
+<!--Team-->
+<div class="bg-primary section scrollspy" id="team">
+    <div class="container">
+        <h2 class="header text_b"> Our Team </h2>
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src={% static "img/avatar2.png"%}>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Dyah Ayu S.<br/>
+                            <small><em><a class="red-text text-darken-1" href="#">Programmer</a></em></small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src={% static "img/avatar2.png"%}>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Nova Karlasemi <br/>
+                            <small><em><a class="red-text text-darken-1" href="#">Designer</a></em></small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src={% static "img/avatar2.png"%}>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Siti Nurmala<br/>
+                            <small><em><a class="red-text text-darken-1" href="#">Designer</a></em></small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Contact Section -->
     <section id="kontak">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col l12 text-center">
                     <h2 class="section-heading">Hubungi Kami!</h2>
                     <h3 class="section-subheading text-active">Berikan komentar, pertanyaan, dan saran bagi perkembangan aplikasi ini.</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col s12 l12">
 
-					<form method="POST" class="post-form" action="{% url 'index'%}">
+					<form method="POST" class="col s12 post-form" action="{% url 'index'%}">
 								{% csrf_token %}
 						<div class="row">
-							<div class="col-md-6">
-                                <div class="form-group">
+							<div class="col l6 m6 s12">
+                                <div class="input-field">
+									<i class="mdi-action-account-circle prefix white-text"></i>
 									{{ form.nama }}
 
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                <div class="form-group">
+                                <div class="input-field">
+									<i class="mdi-communication-email prefix white-text"></i>
 									{{ form.email}}
 
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                <div class="form-group">
-									{{form.no_telepon}}
-
-                                    <p class="help-block text-danger"></p>
-                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
+                            <div class="col l6 m6 s12">
+                                <div class="input-field col s12">
+									<i class="mdi-editor-mode-edit prefix white-text"></i>
 									{{form.pesan}}
 
                                     <p class="help-block text-danger"></p>
@@ -323,8 +323,8 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <span class="copyright">Copyright &copy; Dyah Ayu S 2015</span>
+                <div class="col l12">
+                    <span class="copyright white-text"><b>Copyright &copy; Ējento 2016</b></span>
                 </div>
             </div>
         </div>
@@ -340,6 +340,9 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="{% static 'js/classie.js'%}"></script>
     <script src="{% static 'js/cbpAnimatedHeader.js'%}"></script>
+    <script src="{% static 'min/plugin-min.js'%}"></script>
+    <script src="{% static 'min/custom-min.js'%}"></script>
+    
 
     <!-- Contact Form JavaScript -->
     <script src="{% static 'js/jqBootstrapValidation.js'%}"></script>

@@ -2,7 +2,7 @@
 {% block main %}
 {% load staticfiles %}
     <!-- Page Heading -->
-	<section class="bg-header" style="padding-top: 120px;padding-bottom: 120px;">
+	<section class="bg-header" style="padding-top: 10px;padding-bottom: 10px;">
 		<div class="container">
 			<div class="row">
                 <div class="col-xs-8 col-xs-offset-2" style="margin-left: 0px; width: 300px;">
@@ -32,25 +32,25 @@
         <div class="col-xs-8">
         <form action="{% url 'input-nama' ahp.id %}" method="post" class="form" role="form">
             {% csrf_token %}
-			<p>Masukan 3 nama produk pemulas bibir dengan panjang karakter maksimal 10 karakter. Jika ada produk dengan merek yang sama, buat nama yang berbeda untuk produk tersebut</p>
+			<p>Masukan 3 nama agen dengan panjang karakter maksimal 10 karakter.</p>
 			<br>
 
 			<div class="row">
 				<div class="col-lg-1"></div>
-				<div class="col-xs-4 col-lg-2"><label>Produk 1</label></div>
-				<div class="col-xs-8">{{ form.produk_a }}</div>
+				<div class="col-xs-4 col-lg-2"><label>Agen 1</label></div>
+				<div class="col-xs-8">{{ form.agen_a }}</div>
 			</div>
 			<br>
 			<div class="row">
 				<div class="col-lg-1"></div>
-				<div class="col-xs-4 col-lg-2"><label>Produk 2</label></div>
-				<div class="col-xs-8">{{ form.produk_b }}</div>
+				<div class="col-xs-4 col-lg-2"><label>Agen 2</label></div>
+				<div class="col-xs-8">{{ form.agen_b }}</div>
 			</div>
 			<br>
 			<div class="row">
 				<div class="col-lg-1"></div>
-				<div class="col-xs-4 col-lg-2"><label>Produk 3</label></div>
-				<div class="col-xs-8">{{ form.produk_c }}</div>
+				<div class="col-xs-4 col-lg-2"><label>Agen 3</label></div>
+				<div class="col-xs-8">{{ form.agen_c }}</div>
 			<br>
 		    <br>
 		    <br>

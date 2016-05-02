@@ -2,7 +2,7 @@
 {% block main %}
     {% load staticfiles %}
     <!-- Page Heading -->
-	<section class="bg-header" style="padding-top: 75px;padding-bottom: 40px;">
+	<section class="bg-header" style="padding-top: 10px;padding-bottom: 10px;">
 		<div class="container">
 			<div class="row">
                 <div class="col-xs-8 col-xs-offset-2" style="margin-left: 0px; width: 150px;">
@@ -22,132 +22,19 @@
             </ol>
         </div>
     </div>
-    <!-- /.row -->
-    <div class="row">
-        <div class="col-lg-12">
-			<div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h2 style="margin-top: 0px; margin-bottom: 0px;">Kriteria</h2>
-                        </div>
-        <div class="panel-body">
-		<div class="col-lg-6 table-responsive">
-            <table border="1" class="table table-striped table-bordered">
-                <thead>
-                <tr>
-                    <th></th>
-                    <th style="text-align: center;">Harga</th>
-                    <th style="text-align: center;">Berat Bersih</th>
-                    <th style="text-align: center;">PAO</th>
-                    <th style="text-align: center;">Daya Tahan Produk</th>
-                    <th style="text-align: center;">Cruelty-Free</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr style="text-align: center;">
-                    <th>Harga</th>
-                    <td class="danger"> 1</td>
-                    <td class="success"> {{ kri_a|floatformat:2 }}</td>
-                    <td class="success"> {{ kri_b|floatformat:2 }}</td>
-                    <td class="success"> {{ kri_c|floatformat:2 }}</td>
-                    <td class="success"> {{ kri_d|floatformat:2 }}</td>                    
-                </tr>
-                <tr style="text-align: center;">
-                    <th>Berat Bersih</th>
-                    <td class="warning"> {{ kri_k|floatformat:2 }}</td>
-                    <td class="danger"> 1</td>
-                    <td class="success"> {{ kri_e|floatformat:2 }}</td>
-                    <td class="success"> {{ kri_f|floatformat:2 }}</td>
-                    <td class="success"> {{ kri_g|floatformat:2 }}</td>
-                </tr>
-                <tr style="text-align: center;">
-                    <th>PAO</th>
-                    <td class="warning"> {{ kri_l|floatformat:2}}</td>
-                    <td class="warning"> {{ kri_m|floatformat:2 }}</td>
-                    <td class="danger"> 1</td>
-                    <td class="success"> {{ kri_h|floatformat:2 }}</td>
-                    <td class="success"> {{ kri_i|floatformat:2 }}</td>
-                </tr>
-                <tr style="text-align: center;">
-					<th>Daya Tahan Produk</th>
-					<td class="warning"> {{ kri_n|floatformat:2 }}</td>
-					<td class="warning"> {{ kri_o|floatformat:2 }}</td>
-					<td class="warning"> {{ kri_p|floatformat:2 }}</td>
-					<td class="danger"> 1</td>
-					<td class="success"> {{ kri_j |floatformat:2 }}</td>
-                </tr>
-                <tr style="text-align: center;">
-					<th>Cruelty-Free</th>
-					<td class="warning"> {{ kri_q|floatformat:2 }}</td>
-					<td class="warning"> {{ kri_r|floatformat:2 }}</td>
-					<td class="warning"> {{ kri_s|floatformat:2 }}</td>
-					<td class="warning"> {{ kri_t|floatformat:2 }}</td>
-					<td class="danger"> 1</td>
-                </tr>
-                </tbody>
-            </table>
-        </div> <!-- table responsive -->
-			`<div class="col-lg-6"> <!--nested row -->
-				<p><strong>Keteragan :</strong></p>
-				<p>Nilai level kriteria yang sebelumnya dimasukan akan masuk menjadi elemen yang berwarna hijau dalam bentuk matriks berukuran 5x5</p>
-				<p>Sedangkan elemen matriks berwarna merah merupakan nilai perbandingan antara kriteria dengan level sama</p>
-				<p>Lalu, elemen matriks yag berwarna kuning merupakan nilai perbandingan kriteria yang menjadi bilangan pembilang pada pecahan</p>
-			 </div>
-        </div> <!-- panel body -->
-        </div> <!-- panel -->
-        </div> <!-- col-lg-12 -->
-	</div> <!-- row -->
+
 	
 	<div class="row">
         <div class="col-lg-12">
-			<div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h2 style="margin-top: 0px; margin-bottom: 0px;">Bobot Kriteria</h2>
-                        </div>
-        <div class="col-lg-6 table-responsive">
-            <table border="1" class="table table-striped table-bordered">
-                <tbody>
-                <tr>
-                    <th><strong>Bobot Harga</strong> :</th>
-                    <td style="text-align: center;"><h5> {{ bobot_harga }}</h5></td>
-
-                </tr>
-                <tr>
-                    <th><strong>Bobot Berat Bersih</strong> :</th>
-                    <td style="text-align: center;"><h5> {{ bobot_isi }}</h5></td>
-                    
-                </tr>
-                <tr>
-                    <th><strong>Bobot PAO</strong> :</th>
-                    <td style="text-align: center;"><h5> {{ bobot_pao }}</h5></td>
-
-                </tr>
-                <tr>
-                    <th><strong>Bobot Daya Tahan Produk</strong> :</th>
-                    <td style="text-align: center;"><h5> {{ bobot_time }}</h5></td>
-
-                </tr>
-                <tr>
-                    <th><strong>Bobot Cruelty-Free</strong> :</th>
-                    <td style="text-align: center;"><h5> {{ bobot_cruelty_free }}</h5></td>
-
-                </tr>
-                </tbody>
-            </table>
-        </div> <!-- col-lg-6 -->
-        <div class="col-lg-6">   
-            <p><strong>Keterangan :</strong></p>
-            <p>Tabel Bobot Kriteria ini merupakan hasil perhitungan dari Tabel Kriteria di atas. Bobot dengan nilai tertinggi merupakan kriteria dengan level tertinggi.</p>
-            <p>Berikut ini merupakan hasil perhitungan konsistensi nilai input perbandingan kriteria</p>
+			<p>Berikut ini merupakan hasil perhitungan konsistensi nilai input perbandingan kriteria</p>
             <p><strong>Konsistensi = {{ cons }} = {{ cons_pre }} %</strong></p>
             <p>Jika nilai Konsistensi anda <strong>kurang dari 10 %</strong>, maka anda dapat <strong>lanjut</strong> ke tahap selanjutnya.</p>
             <p>Namun, jika nilai Konsistensi anda <strong>lebih dari 10%</strong>, maka anda harus <strong>kembali</strong> ke proses sebelumnya.</p>
-        </div> <!-- col-lg-6 -->
-		</div> <!-- panel bobot kriteria -->
         </div> <!-- col-lg-12 -->
     </div>
 
-				<div class="row">
-                    <div class="col-lg-12 col-xs-12">
+	<div class="row">
+        <div class="col-lg-12 col-xs-12">
 						<div class="col-lg-1 col-xs-1">
 							{% if  cons_pre >= 10.00 %}
 							<a href="{% url 'input-kri'%}"><button type="submit" class="btn btn-primary">Kembali</button></a>
@@ -163,5 +50,6 @@
 					<br>
 					<br>
 					<br>
-                </div>
+        </div>
+     </div>
 {% endblock %}
