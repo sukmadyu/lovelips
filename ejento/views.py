@@ -227,21 +227,17 @@ class DetailAHPView(View):
         kri_a=float(kri[0])
         kri_b=float(kri[1])
         kri_c=float(kri[2])
-	kri_d=float(kri[3])
-	kri_e=float(kri[4])
-	kri_f=float(kri[5])
+	
 	kri_g=1/kri_a
-	kri_h=1/kri_b
-	kri_i=1/kri_d
-	kri_j=1/kri_c
-	kri_k=1/kri_e
-	kri_l=1/kri_f
-
-        kri_arr=np.array([1,kri_a,kri_b,kri_c,
-                          1/kri_a,1,kri_d,kri_e,
-                          1/kri_b,1/kri_d,1,kri_f,
-                          1/kri_c,1/kri_e,1/kri_f,1])
-        kri_arr=kri_arr.reshape(4,4)
+	kri_h=1/kri_c
+	
+	kri_j=1/kri_b
+	
+        kri_arr=np.array([1,kri_a,kri_b,
+                          1/kri_a,1,kri_c,
+                          1/kri_b,1/kri_c,1
+                          ])
+        kri_arr=kri_arr.reshape(3,3)
         cons=calculateConsistency(kri_arr)
 
 
@@ -275,9 +271,9 @@ class DetailAHPView(View):
                                                   'bobot_up_a':up_arr_a,'bobot_up_b':up_arr_b,'bobot_up_c':up_arr_c,
                                                   'bobot_sp_a':sp_arr_a,'bobot_sp_b':sp_arr_b,'bobot_sp_c':sp_arr_c,
                                                   'kri_a':kri_a,'kri_b':kri_b,'kri_c':kri_c,
-						  'kri_d':kri_d,'kri_e':kri_e,'kri_f':kri_f,
-						  'kri_g':kri_g,'kri_h':kri_h,'kri_i':kri_i,
-						  'kri_j':kri_j,'kri_k':kri_k,'kri_l':kri_l,                                                
+						  
+						  'kri_g':kri_g,'kri_h':kri_h,
+						  'kri_j':kri_j,
 						  'bobot_pp':kri_pp,'bobot_up':kri_up,'bobot_sp':kri_sp,
                                                   'agen_a':agen_a,'agen_b':agen_b,'agen_c':agen_c,
                                                   'agen_max':agen[inde],'cons':cons,'cons_pre':cons*100,
@@ -294,21 +290,20 @@ class KonsistensiAHPView(View):
         kri_a=float(kri[0])
         kri_b=float(kri[1])
         kri_c=float(kri[2])
-	kri_d=float(kri[3])
-	kri_e=float(kri[4])
-	kri_f=float(kri[5])
+	
 	kri_g=1/kri_a
-	kri_h=1/kri_b
-	kri_i=1/kri_d
-	kri_j=1/kri_c
-	kri_k=1/kri_e
-	kri_l=1/kri_f
+	kri_h=1/kri_c
+	
+	kri_j=1/kri_b
+	print kri_a
+	print kri_b
+	print kri_c
 
-        kri_arr=np.array([1,kri_a,kri_b,kri_c,
-                          1/kri_a,1,kri_d,kri_e,
-                          1/kri_b,1/kri_d,1,kri_f,
-                          1/kri_c,1/kri_e,1/kri_f,1])
-        kri_arr=kri_arr.reshape(4,4)
+        kri_arr=np.array([1,kri_a,kri_b,
+                          1/kri_a,1,kri_c,
+                          1/kri_b,1/kri_c,1
+                          ])
+        kri_arr=kri_arr.reshape(3,3)
         cons=calculateConsistency(kri_arr)
 
 
@@ -321,9 +316,9 @@ class KonsistensiAHPView(View):
         kri_arr=kri_arr.reshape(3,1)
 
         return render(request,self.template_name,{'kri_a':kri_a,'kri_b':kri_b,'kri_c':kri_c,
-						'kri_d':kri_d,'kri_e':kri_e,'kri_f':kri_f,
-						'kri_g':kri_g,'kri_h':kri_h,'kri_i':kri_i,
-						'kri_j':kri_j,'kri_k':kri_k,'kri_l':kri_l,
+						
+						'kri_g':kri_g,'kri_h':kri_h,
+						'kri_j':kri_j,
 						'bobot_pp':kri_pp,'bobot_up':kri_up,'bobot_sp':kri_sp,
 						'cons':cons,'cons_pre':cons*100,'alternatif':alternatif
 						})

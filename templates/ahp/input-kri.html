@@ -167,9 +167,9 @@
                 });
 
                 $("#submit").click(function(){
-                    pp=$('input[name=price]:checked').val();
-                    up=$('input[name=berat]:checked').val();
-                    sp=$('input[name=pao]:checked').val();
+                    pp=$('input[name=pp]:checked').val();
+                    up=$('input[name=up]:checked').val();
+                    sp=$('input[name=sp]:checked').val();
                     $("#id_kri_pp_up").val(kriteria(pp,up));
                     $("#id_kri_pp_sp").val(kriteria(pp,sp));
                     $("#id_kri_up_sp").val(kriteria(up,sp));
