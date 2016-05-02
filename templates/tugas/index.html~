@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#3BC896">
+    <title>Ējento</title>
+
+    <!-- CSS  -->
+    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
+</head>
+<body id="top" class="scrollspy">
+
+<!-- Pre Loader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
+
+<!--Navigation-->
+ <div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+            <a href="#" id="logo-container" class="brand-logo"> Ējento</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#intro"><b>Tentang</b></a></li>
+                    <li><a href="#kriteria"><b>Kriteria</b></a></li>
+					<li><a href="#panduan"><b>Panduan</b></a></li>
+                    <li><a href="#team"><b>Team</b></a></li>
+                    <li><a href="#contact"><b>Kontak</b></a></li>
+                    <li><a href="#" target="_blank"><b>Mulai</b></a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="#intro">Tentang</a></li>
+                    <li><a href="#kriteria">Kriteria</a></li>
+					<li><a href="#panduan">Panduan</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="#" target="_blank">Mulai</a></li>
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu" style="margin-left: 10px;"></i></a>  
+			</div>
+        </div>
+    </nav>
+</div>
+
+<!--Hero-->
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <h1 class="text_h center header cd-headline letters type">
+            <span>Ējento</span> 
+            <span class="cd-words-wrapper waiting">
+                <b class="is-visible">SPK Penentu Agen Asuransi Terbaik</b>
+                </span>
+        </h1>
+    </div>
+</div>
+
+<!--Intro and service-->
+<div id="intro" class="section scrollspy">
+    <div class="container">
+        <div class="row">
+            <div  class="col s12">
+                <h2 class="center header text_h2"> Selamat Datang! di website <span class="span_h2"> SPK  </span> kami. </h2>
+				<hr> </hr>
+				<span style="color:#3BC896"> Ējento </span> adalah sebuah aplikasi penunjang keputusan penentu agen (karyawan) terbaik. Aplikasi ini menggunakan metode <i> Analytical Hierarchy Process </i>(AHP) yang dapat memecahkan masalah yang kompleks, rumit, dan tak terstruktur guna membantu manajer dalam mengambil keputusan.
+            </div> 
+		</div>
+	</div>
+</div>
+			
+<!--Kriteria-->
+<div id="kriteria" class="section scrollspy">
+    <div class="container">
+		<div class="row">
+        	<h2 class="header text_b">KRITERIA </h2>
+			<p> Untuk mendapatkan hasil dengan alternatif terbaik, maka aplikasi penunjang keputusan ini membutuhkan tiga kriteria </p>
+		
+        
+			<div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-image-filter-1"></i>
+					<h5 class="promo-caption">Premi Pertama (PP)</h5>
+                    <p class="light center">Premi pertama adalah premi yang pertama kali dibayarkan, angkanya sesuai dengan perjanjian
+yang tertera dalam polis. Kriteria ini mutlak lebih penting daripada kriteria lain.</p>
+                </div>
+            </div>
+			
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-action-account-balance-wallet"></i>
+                    <h5 class="promo-caption">Uang Pertanggungaan (UP)</h5>
+                    <p class="light center">Uang Pertanggungan (Face Amount) - Uang Pertangggungan yang tercantum pada halaman polis yang akan dibayar apabila terjadi kematian atau kondisi polis lain yaitu dibayarkan pada saat masa pertanggungan berakhir sesuai dengan macam asuransi yang diambil. Kriteria ini sedikit lebih penting daripada elemen lain.</p>
+                </div>
+            </div>
+			
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-action-receipt"></i>
+                    <h5 class="promo-caption">Surat Permintaan (SP)</h5>
+                    <p class="light center">Surat yang digunakan untuk komunikasi antara calon nasabah dan pemegang polis untuk mendapatkan informasi tentang macam/jenis dan spesifikasinya, jasa, serta kebijaksanaan perusahaan tentang pelayananseperti cara pembayaran, pemberian layanan penjualan, layanan purna jual, cara pengiriman, dan cara penyerahan. Kriteria ini sama pentingnya dengan kriteria lain. Pada aplikasi ini, masukan jumlah surat permintaan yang diminta agen.</p>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+<!--Panduan-->
+<div class="section scrollspy" id="panduan">
+    <div class="container">
+        <h2 class="header text_b">PANDUAN </h2>
+        <div class="row">
+            <div class="col s12 m6 l6">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/step-one.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Langkah Ke-1<i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="#">Klik Tombol Mulai</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Klik Tombol Mulai <i class="mdi-navigation-close right"></i></span>
+                        <p>Klik tombol mulai yang terletak pada bagian Menu untuk memulai aplikasi sistem pendukung keputusan pemilihan karyawan terbaik.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l6">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/step-two.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Langkah Ke-2 <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="#">Input Nama Agen</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Input Nama Agen <i class="mdi-navigation-close right"></i></span>
+                        <p>Masukan nama agen yang akan dipilih menjadi agen terbaik pada form yang telah disediakan, lalu tekan tombol submit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l6">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/step-three.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Langkah Ke-3<i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="#">Input Data Agen</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Input Data Agen <i class="mdi-navigation-close right"></i></span>
+                        <p>Masukan data agen yang akan dipilih pada form yang telah diurutkan menurut kriteria yang telah ditentukan. Masukan data agen yang memiliki Premi Pertama pada form premi pertama, lalu masukan data agen kriteria lain seperti Uang Pertanggungan dan Surat Permintaan pada form masing-masing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l6">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/step-four.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Langkah Ke-4 <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="#">Melihat Hasil</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Melihat Hasil <i class="mdi-navigation-close right"></i></span>
+                        <p>Setelah semua tahap telah dilakuakan, maka anda akan mendapatkan hasil peringkat agen yang terbaik yang akan ditampilkan secara grafis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Parallax-->
+<div class="parallax-container">
+    <div class="parallax"><img src="img/parallax1.png"></div>
+</div>
+
+<!--Team-->
+<div class="section scrollspy" id="team">
+    <div class="container">
+        <h2 class="header text_b"> Our Team </h2>
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="img/avatar2.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Dyah Ayu S.<br/>
+                            <small><em><a class="red-text text-darken-1" href="#">Programmer</a></em></small>
+                        </span>
+                        <p>
+                            <a class="blue-text text-lighten-2" href="#">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="#">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="#">
+                                <i class="fa fa-google-plus-square"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="img/avatar2.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Nova Karlasemi <br/>
+                            <small><em><a class="red-text text-darken-1" href="#">Designer</a></em></small></span>
+                        <p>
+                            <a class="blue-text text-lighten-2" href="#">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="#">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="#">
+                                <i class="fa fa-google-plus-square"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="img/avatar2.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Siti Nurmala<br/>
+                            <small><em><a class="red-text text-darken-1" href="#">Designer</a></em></small></span>
+                        <p>
+                            <a class="blue-text text-lighten-2" href="#">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="#">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                            <a class="blue-text text-lighten-2" href="#">
+                                <i class="fa fa-google-plus-square"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<footer id="contact" class="page-footer default_color scrollspy">
+    <div class="container">  
+        <div class="row">
+            <div class="col l12 s12">
+                <form class="col s12" action="contact.php" method="post">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="mdi-action-account-circle prefix white-text"></i>
+                            <input id="icon_prefix" name="name" type="text" class="validate white-text">
+                            <label for="icon_prefix" class="white-text">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="mdi-communication-email prefix white-text"></i>
+                            <input id="icon_email" name="email" type="email" class="validate white-text">
+                            <label for="icon_email" class="white-text">Email-id</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="mdi-editor-mode-edit prefix white-text"></i>
+                            <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
+                            <label for="icon_prefix2" class="white-text">Message</label>
+                        </div>
+                        <div class="col offset-s7 s5">
+                            <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
+                                <i class="mdi-content-send right white-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright default_color">
+        <div class="container">
+            Made by <a class="white-text" href="#">Ējento Team</a> Thanks to <a class="white-text" href="http://materializecss.com/">materializecss</a>
+        </div>
+    </div>
+</footer>
+
+
+    <!--  Scripts-->
+    <script src="min/plugin-min.js"></script>
+    <script src="min/custom-min.js"></script>
+
+    </body>
+</html>
